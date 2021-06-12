@@ -1,27 +1,28 @@
-const User = require('../database/models/user');
-
 const LocalStrategy = require('passport-local').Strategy;
+
+const User = require('../models').User;
 
 const strategy = new LocalStrategy(
   {
-    usernameField: 'username',
+    usernameField: 'email',
+    passwordField: 'password',
   },
-  (username, password, done) => {
-    User.findOne({ username }, (err, user) => {
-      if (err) {
-        return done(err);
-      }
-
-      if (!user) {
-        return done(null, false, { message: 'Incorrect Username' });
-      }
-
-      if (!user.checkPassword(password)) {
-        return done(null, false, { message: 'Incorrect Password' });
-      }
-
-      return done(null, user);
+  async function (email, password, done) {
+    const user = await User.findOne({
+      where: {
+        email: email,
+      },
     });
+
+    if (user == null) {
+      return done(null, false, { message: 'Incorrect email.' });
+    }
+
+    // if (!user.validPassword(password)) {
+    //   return done(null, false, { message: 'Incorrect password.' });
+    // }
+
+    return done(null, user);
   }
 );
 

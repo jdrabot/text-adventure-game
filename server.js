@@ -1,10 +1,11 @@
+require('dotenv').config();
+
 const express = require('express');
-const mongoose = require('mongoose');
+const mysql = require('mysql');
 const session = require('express-session');
-const MongoStore = require('connect-mongo')(session);
+const MySQLStore = require('express-mysql-session')(session);
 const passport = require('passport');
 
-const mongooseConnection = require('./database');
 const routes = require('./routes');
 
 const app = express();
@@ -19,23 +20,39 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-// Sessions
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_DB,
+});
+
+const sessionStore = new MySQLStore(
+  {
+    checkExpirationInterval: parseInt(process.env.DB_CHECK_EXP_INTERVAL, 10),
+    expiration: parseInt(process.env.DB_EXPIRATION, 10),
+  },
+  connection
+);
+
+/* Create a cookie that expires in 1 day */
+const expireDate = new Date();
+expireDate.setDate(expireDate.getDate() + 1);
+
 app.use(
   session({
-    secret: 'RANDOM STRING',
-    store: new MongoStore({
-      mongooseConnection,
-    }),
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
+    secret: process.env.DB_SECRET,
+    store: sessionStore,
+    cookie: { expires: expireDate },
   })
 );
 
-// Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Add routes, both API and view
 app.use(routes);
 
 // Start the API server

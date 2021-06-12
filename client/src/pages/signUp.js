@@ -6,7 +6,7 @@ const SignUp = () => {
   const history = useHistory();
 
   const [signUpCreds, setSignUpCreds] = useState({
-    username: '',
+    email: '',
     password: '',
   });
 
@@ -20,19 +20,16 @@ const SignUp = () => {
     event.preventDefault();
 
     axios
-      .post('/api/users', {
-        username: signUpCreds.username,
+      .post('/api/users/signup', {
+        email: signUpCreds.email,
         password: signUpCreds.password,
       })
       .then((response) => {
-        if (!response.data.error) {
-          history.replace('/login');
-        } else {
-          console.log('USERNAME TAKEN');
-        }
+        console.log('RESPONSE', response);
+        history.replace('/login');
       })
       .catch((error) => {
-        console.log(error);
+        console.log('ERROR', error);
       });
   };
 
@@ -47,9 +44,9 @@ const SignUp = () => {
           type="email"
           id="inputEmail"
           className="form-control"
-          name="username"
+          name="email"
           placeholder="Email address"
-          value={signUpCreds.username}
+          value={signUpCreds.email}
           onChange={handleChange}
         />
         <label htmlFor="inputPassword" className="sr-only">

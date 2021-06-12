@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { isNil } from 'lodash';
 import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Navbar from './components/navbar';
@@ -16,7 +17,7 @@ const App = () => {
     dispatch({ type: LOADING });
 
     axios.get('/api/users').then((response) => {
-      if (response.data.user) {
+      if (!isNil(response.data.user)) {
         dispatch({ type: SET_USER, user: response.data.user });
         history.push('/');
       } else {

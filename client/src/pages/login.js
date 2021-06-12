@@ -9,7 +9,7 @@ const Login = () => {
   const history = useHistory();
 
   const [loginCreds, setLoginCreds] = useState({
-    username: '',
+    email: '',
     password: '',
   });
 
@@ -26,7 +26,7 @@ const Login = () => {
 
     axios
       .post('/api/users/login', {
-        username: loginCreds.username,
+        email: loginCreds.email,
         password: loginCreds.password,
       })
       .then((response) => {
@@ -52,9 +52,9 @@ const Login = () => {
           type="email"
           id="inputEmail"
           className="form-control"
-          name="username"
+          name="email"
           placeholder="Email address"
-          value={loginCreds.username}
+          value={loginCreds.email}
           onChange={handleChange}
         />
         <label htmlFor="inputPassword" className="sr-only">

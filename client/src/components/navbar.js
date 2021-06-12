@@ -14,7 +14,7 @@ const Navbar = () => {
     dispatch({ type: LOADING });
 
     axios
-      .post('/api/users/logout')
+      .get('/api/users/logout')
       .then((response) => {
         if (response.status === 200) {
           dispatch({ type: UNSET_USER });
