@@ -1,5 +1,5 @@
 {
-  "name": "mern_with_passport",
+  "name": "sern_with_passport",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",

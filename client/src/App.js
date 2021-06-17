@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 import Home from './pages/home';
 import Login from './pages/login';
 import Signup from './pages/signUp';
+import Banner from "./components/banner";
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
 
@@ -27,9 +28,13 @@ const App = () => {
     });
   }, [dispatch, history]);
 
+  
+
   return (
     <div>
+      <Banner />
       <Navbar />
+      
 
       {state.user ? (
         <Switch>
