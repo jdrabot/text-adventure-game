@@ -23,7 +23,7 @@ export default function Room() {
       <Card className={classes.root}>
         <CardHeader>#</CardHeader>
           <CardActionArea>
-              {/* title */}
+              {/* location title */}
           <Typography gutterBottom variant="h5" component="h2">
                   #
           </Typography>
