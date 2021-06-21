@@ -2,10 +2,11 @@ import axios from 'axios';
 import { isNil } from 'lodash';
 import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Navbar from "./components/Navbar";
 import Home from './pages/home';
 import Login from './pages/login';
 import Signup from './pages/signUp';
+import Banner from "./components/Banner";
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
 
@@ -27,9 +28,13 @@ const App = () => {
     });
   }, [dispatch, history]);
 
+  
+
   return (
     <div>
+      <Banner />
       <Navbar />
+      
 
       {state.user ? (
         <Switch>
