@@ -10,6 +10,8 @@ const SignUp = () => {
     password: '',
   });
 
+  const [errorMsg, setErrorMsg] = useState(null);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -18,6 +20,11 @@ const SignUp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (signUpCreds.password < 8) {
+      setErrorMsg("Your password must be at least 8 characters long.");
+      return;
+    }
 
     axios
       .post('/api/users/signup', {
@@ -30,12 +37,14 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log('ERROR', error);
+        setErrorMsg(error.message);
       });
   };
 
   return (
     <div className="text-center">
       <h4>Sign Up</h4>
+      {errorMsg ? <p>{errorMsg}</p> : null}
       <form className="form-signin">
         <label htmlFor="inputEmail" className="sr-only">
           Email address
@@ -61,7 +70,11 @@ const SignUp = () => {
           value={signUpCreds.password}
           onChange={handleChange}
         />
-        <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={handleSubmit}>
+        <button
+          className="btn btn-lg btn-primary btn-block"
+          type="submit"
+          onClick={handleSubmit}
+        >
           Sign Up
         </button>
       </form>

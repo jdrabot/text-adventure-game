@@ -11,7 +11,7 @@ const styles = {
 function Banner() {
   return (
     <div style={styles.bannerStyle}>
-      <h1>RPG TITLE</h1>
+      <h1>Castle of Madness</h1>
     </div>
   );
 }

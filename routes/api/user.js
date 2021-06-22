@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/signup', async function (req, res, next) {
+  console.log("signup hit");
   let user = {};
 
   user = await User.findOne({
@@ -42,11 +43,6 @@ router.post('/signup', async function (req, res, next) {
     return;
   }
 
-  const salt = crypto.randomBytes(64).toString('hex');
-  const password = crypto
-    .pbkdf2Sync(req.body.password, salt, 10000, 64, 'sha512')
-    .toString('base64');
-
   if (!isValidPassword(req.body.password)) {
     return res
       .status(400)
@@ -57,17 +53,14 @@ router.post('/signup', async function (req, res, next) {
       .status(400)
       .json({ status: 'error', message: 'Email address not formed correctly.' });
   }
-
+  console.log(req.body.email, req.body.password);
   try {
     user = await User.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
       email: req.body.email,
-      role: 'user',
-      password: password,
-      salt: salt,
+      password: req.body.password,
     });
   } catch (err) {
+    console.log(err);
     return res.json({ status: 'error', message: 'Email address already exists.' });
   }
 
@@ -105,7 +98,7 @@ router.post('/login', function (req, res, next) {
         return next(err);
       }
 
-      return res.json({ status: 'ok' });
+      return res.json({ status: "ok", ...user });
     });
   })(req, res, next);
 });
