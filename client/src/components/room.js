@@ -16,27 +16,23 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Room() {
+export function Room() {
   const classes = useStyles();
 
   return (
-      <Card className={classes.root}>
-        <CardHeader>#</CardHeader>
-          <CardActionArea>
-              {/* location title */}
-          <Typography gutterBottom variant="h5" component="h2">
-                  #
-          </Typography>
-              {/* image */}
-        <CardMedia
-          className={classes.media}
-          image="//#endregion"
-          title="#"
-        />
+    <Card className={classes.root}>
+      <CardHeader>#</CardHeader>
+      <CardActionArea>
+        {/* location title */}
+        <Typography gutterBottom variant="h5" component="h2">
+          #
+        </Typography>
+        {/* image */}
+        <CardMedia className={classes.media} image="//#endregion" title="#" />
         <CardContent>
-                  {/* dialog */}
+          {/* dialog */}
           <Typography variant="body2" color="textSecondary" component="p">
-           #
+            #
           </Typography>
         </CardContent>
       </CardActionArea>

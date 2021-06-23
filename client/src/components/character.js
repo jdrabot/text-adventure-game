@@ -15,24 +15,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Character() {
+export function Character() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-          <CardActionArea>
-              {/* image */}
-        <CardMedia
-          className={classes.media}
-          image="//#endregion"
-          title="#"
-        />
-              <CardContent>
-                  {/* hero name */}
+      <CardActionArea>
+        {/* image */}
+        <CardMedia className={classes.media} image="//#endregion" title="#" />
+        <CardContent>
+          {/* hero name */}
           <Typography gutterBottom variant="h5" component="h2">
-                      #
+            #
           </Typography>
-                  {/* stats */}
+          {/* stats */}
           <Typography variant="body2" color="textSecondary" component="p">
             HP:
           </Typography>

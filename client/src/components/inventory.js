@@ -15,17 +15,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Inventory() {
+export function Inventory() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="//#endregion"
-          title="#"
-        />
+        <CardMedia className={classes.media} image="//#endregion" title="#" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             #

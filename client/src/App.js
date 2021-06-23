@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from './pages/home';
+import Gameplay from "./pages/gameplay";
 import Login from './pages/login';
 import Signup from './pages/signUp';
 import Banner from "./components/Banner";
@@ -33,11 +34,11 @@ const App = () => {
     <div>
       <Banner />
       <Navbar />
-      
 
       {state.user ? (
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route excact path="/gameplay" component={Gameplay} />
         </Switch>
       ) : (
         <Switch>

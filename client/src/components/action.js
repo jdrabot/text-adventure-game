@@ -37,14 +37,14 @@ export default function GroupOrientation() {
 }
 
 {/* action dialog box */}
-const useStyles = makeStyles({
+useStyles({
   root: {
     minWidth: 275,
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
   },
   title: {
     fontSize: 14,
@@ -54,17 +54,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function OutlinedCard() {
+export function OutlinedCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root} variant="outlined">
-          <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+      <CardContent>
+        <Typography
+          className={classes.title}
+          color="textSecondary"
+          gutterBottom
+        >
           #
         </Typography>
-        
       </CardContent>
     </Card>
   );
