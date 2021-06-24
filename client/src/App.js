@@ -32,13 +32,12 @@ const App = () => {
 
   return (
     <div>
-      <Banner />
       <Navbar />
+      <Banner />
 
       {state.user ? (
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route excact path="/gameplay" component={Gameplay} />
+          <Route exact path="/" component={Gameplay} />
         </Switch>
       ) : (
         <Switch>
