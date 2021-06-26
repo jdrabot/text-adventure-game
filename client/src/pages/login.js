@@ -45,7 +45,7 @@ const Login = () => {
     <div className="text-center">
       <h4>Login</h4>
       <form className="form-signin">
-        <label htmlFor="inputEmail" className="sr-only">
+        <label htmlFor="inputEmail">
           Email address
         </label>
         <input
@@ -57,7 +57,7 @@ const Login = () => {
           value={loginCreds.email}
           onChange={handleChange}
         />
-        <label htmlFor="inputPassword" className="sr-only">
+        <label htmlFor="inputPassword">
           Password
         </label>
         <input
@@ -69,7 +69,7 @@ const Login = () => {
           value={loginCreds.password}
           onChange={handleChange}
         />
-        <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={handleSubmit}>
+        <button className="action-button" type="submit" onClick={handleSubmit}>
           Login
         </button>
       </form>
