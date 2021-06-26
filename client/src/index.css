@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Courier, monospace;
+  font-family: "Courier", monospace;
   -webkit-font-smoothing: none;
   background-color: black;
   color: rgb(12, 177, 26);
@@ -9,4 +9,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.action-button {
+  color: rgb(12, 177, 26);
+}
+
+.cards {
+  background-color: black;
 }

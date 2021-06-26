@@ -5,7 +5,7 @@ const Enemy = () => {
   return (
     <div class="d-flex justify-content-around">
       <div>
-        <Card style={{ width: "300px", height: "300px" }}>
+        <Card className="cards" style={{ width: "300px", height: "300px" }}>
           <CardBody>
             <CardTitle tag="h5">Enemy Name</CardTitle>
           </CardBody>
@@ -14,10 +14,7 @@ const Enemy = () => {
             <CardText>HP:</CardText>
           </CardBody>
         </Card>
-      </div>
-      <div>
-        <h1>Inventory</h1>
-      </div>
+      </div>      
     </div>
   );
 };
