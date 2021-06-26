@@ -3,7 +3,7 @@ body {
   font-family: "Courier", monospace;
   -webkit-font-smoothing: none;
   background-color: black;
-  color: rgb(12, 177, 26);
+  color: rgb(115, 242, 61);
 }
 
 code {
@@ -11,9 +11,16 @@ code {
     monospace;
 }
 
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
 .action-button {
-  color: rgb(12, 177, 26);
-  border-color: rgb(12, 177, 26);
+  color: rgb(115, 242, 61);
+  border-color: rgb(115, 242, 61);
   background-color: black;
 }
 
