@@ -45,33 +45,59 @@ const Login = () => {
     <div className="text-center">
       <h4>Login</h4>
       <form className="form-signin">
-        <label htmlFor="inputEmail">
-          Email address
-        </label>
+        <label htmlFor="inputEmail">Email address</label>
         <input
           type="email"
           id="inputEmail"
-          className="form-control"
+          // className="form-control"
           name="email"
           placeholder="Email address"
           value={loginCreds.email}
           onChange={handleChange}
         />
-        <label htmlFor="inputPassword">
-          Password
-        </label>
+        <label htmlFor="inputPassword">Password</label>
         <input
           type="password"
           id="inputPassword"
-          className="form-control"
+          // className="form-control"
           name="password"
           placeholder="Password"
           value={loginCreds.password}
           onChange={handleChange}
         />
-        <button className="action-button" type="submit" onClick={handleSubmit}>
-          Login
-        </button>
+        <div>
+                      <button
+          
+          
+          
+          
+          
+          
+                  className="action-button"
+           
+           
+           
+           
+           
+           
+            type="submit"
+
+
+
+
+
+
+                                                                              onClick={handleSubmit}
+          
+          
+          
+          
+          
+          
+          >
+            Login
+                      </button>
+        </div>
       </form>
     </div>
   );
