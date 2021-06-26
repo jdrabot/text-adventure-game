@@ -70,6 +70,9 @@ const Navbar = () => {
           )}
         </ul>
       </div>
+      <div>
+        <h4>Castle of Madness</h4>
+      </div>
     </nav>
   );
 };
