@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from './pages/home';
+import Gameplay from "./pages/gameplay";
 import Login from './pages/login';
 import Signup from './pages/signUp';
 import Banner from "./components/Banner";
@@ -23,7 +24,6 @@ const App = () => {
         history.push('/');
       } else {
         dispatch({ type: UNSET_USER });
-        history.push('/login');
       }
     });
   }, [dispatch, history]);
@@ -32,13 +32,12 @@ const App = () => {
 
   return (
     <div>
-      <Banner />
       <Navbar />
-      
+      <Banner />
 
       {state.user ? (
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Gameplay} />
         </Switch>
       ) : (
         <Switch>

@@ -1,48 +1,30 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
-import CardHeader from '@material-ui/core/CardHeader';
+import {
+  Card,
+  CardText,
+  CardBody,
+  CardLink,
+  CardTitle,
+  CardSubtitle,
+} from "reactstrap";
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 1035,
-  },
-  media: {
-    height: 280,
-  },
-});
-
-export default function Room() {
-  const classes = useStyles();
-
+const Room = () => {
   return (
-      <Card className={classes.root}>
-        <CardHeader>#</CardHeader>
-          <CardActionArea>
-              {/* location title */}
-          <Typography gutterBottom variant="h5" component="h2">
-                  #
-          </Typography>
-              {/* image */}
-        <CardMedia
-          className={classes.media}
-          image="//#endregion"
-          title="#"
-        />
-        <CardContent>
-                  {/* dialog */}
-          <Typography variant="body2" color="textSecondary" component="p">
-           #
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div class="row justify-content-center align-items-center">
+      <Card>
+        <CardBody>
+          <CardTitle tag="h5">Location</CardTitle>
+        </CardBody>
+        <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+        <CardBody>
+          <CardText>
+       DIALOG
+          </CardText>
+        </CardBody>
+      </Card>
+    </div>
   );
-}
+};
 
 
 export default Room;

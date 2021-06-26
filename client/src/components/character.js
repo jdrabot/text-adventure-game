@@ -1,46 +1,34 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import {
+  Card,
+  CardText,
+  CardBody,
+  CardTitle,
+} from "reactstrap";
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
-
-export default function Character() {
-  const classes = useStyles();
-
+const Character = () => {
   return (
-    <Card className={classes.root}>
-          <CardActionArea>
-              {/* image */}
-        <CardMedia
-          className={classes.media}
-          image="//#endregion"
-          title="#"
-        />
-              <CardContent>
-                  {/* hero name */}
-          <Typography gutterBottom variant="h5" component="h2">
-                      #
-          </Typography>
-                  {/* stats */}
-          <Typography variant="body2" color="textSecondary" component="p">
-            HP:
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div class="d-flex justify-content-around">
+      <div>
+      <Card style={{width:"150px", height:"150px"}}>
+        <CardBody>
+          <CardTitle tag="h5">Name</CardTitle>
+        </CardBody>
+        <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+        <CardBody>
+          <CardText>
+       HP:
+          
+          </CardText>
+        </CardBody>
+        </Card>
+      </div>
+      <div>
+        <h1>Inventory</h1>
+      </div>
+    </div>
   );
-}
+};
 
 
 export default Character;
