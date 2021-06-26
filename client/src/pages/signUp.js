@@ -49,31 +49,32 @@ const SignUp = () => {
         null
       }
       <form className="form-signin">
-        <label htmlFor="inputEmail" className="sr-only">
+        <label htmlFor="inputEmail">
           Email address
         </label>
         <input
           type="email"
           id="inputEmail"
-          className="form-control"
+          // className="form-control"
           name="email"
           placeholder="Email address"
+          block
           value={signUpCreds.email}
           onChange={handleChange}
         />
-        <label htmlFor="inputPassword" className="sr-only">
+        <label htmlFor="inputPassword">
           Password
         </label>
         <input
           type="password"
           id="inputPassword"
-          className="form-control"
+          // className="form-control"
           name="password"
           placeholder="Password"
           value={signUpCreds.password}
           onChange={handleChange}
         />
-        <button className="btn btn-lg btn-primary btn-block" type="submit" onClick={handleSubmit}>
+        <button className="action-button" type="submit" onClick={handleSubmit}>
           Sign Up
         </button>
       </form>
