@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-black">
       <Link to="/" className="btn btn-link text-secondary">
         <span className="text-secondary">home</span>
       </Link>
@@ -46,7 +46,11 @@ const Navbar = () => {
         <ul className="navbar-nav">
           {state.user ? (
             <li className="nav-item active">
-              <Link to="#" className="btn btn-link text-secondary" onClick={logout}>
+              <Link
+                to="#"
+                className="btn btn-link text-secondary"
+                onClick={logout}
+              >
                 <span className="text-secondary">logout</span>
               </Link>
             </li>

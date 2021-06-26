@@ -3,7 +3,7 @@ import { Card, CardText, CardBody, CardTitle } from "reactstrap";
 
 const Enemy = () => {
   return (
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-around">
       <div>
         <Card style={{ width: "300px", height: "300px" }}>
           <CardBody>

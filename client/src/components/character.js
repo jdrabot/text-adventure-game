@@ -3,19 +3,16 @@ import {
   Card,
   CardText,
   CardBody,
-  CardLink,
   CardTitle,
-  CardSubtitle,
 } from "reactstrap";
 
 const Character = () => {
-
   return (
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-around">
       <div>
-      <Card style={{width:"300px", height:"300px"}}>
+      <Card style={{width:"150px", height:"150px"}}>
         <CardBody>
-          <CardTitle tag="h5">Character Name</CardTitle>
+          <CardTitle tag="h5">Name</CardTitle>
         </CardBody>
         <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
         <CardBody>
