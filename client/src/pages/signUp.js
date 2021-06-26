@@ -43,7 +43,6 @@ const SignUp = () => {
 
   return (
     <div className="text-center">
-      <h4>Sign Up</h4>
       {errorMsg ? 
         <p>{errorMsg}</p> :
         null
@@ -74,9 +73,11 @@ const SignUp = () => {
           value={signUpCreds.password}
           onChange={handleChange}
         />
-        <button className="action-button" type="submit" onClick={handleSubmit}>
-          Sign Up
-        </button>
+        <div>
+          <button className="action-button" type="submit" onClick={handleSubmit}>
+              Sign Up
+          </button>
+        </div>
       </form>
     </div>
   );
