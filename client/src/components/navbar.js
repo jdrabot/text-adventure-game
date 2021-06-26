@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-black">
-      <Link to="/" className="btn btn-link text-secondary">
+      <Link to="/" className="btn btn-link ">
         <span className="text-secondary">home</span>
       </Link>
       <button
