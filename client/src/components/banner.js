@@ -5,6 +5,8 @@ const styles = {
     background: "black",
     height: "60px",
     color: "rgb(12, 177, 26)",
+    textDecoration: "underline",
+    marginLeft: "50px",
   },
 };
 
