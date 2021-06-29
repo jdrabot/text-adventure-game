@@ -8,13 +8,13 @@ const Action = () => {
   return (
     <div class="d-flex justify-content-around">
       <div>
-        <Button className="action-button" color="black" size="sm" block>
+        <Button className="action-button" color="black" size="lg" block>
           Inspect the cupboard
         </Button>
-        <Button className="action-button" color="black" size="sm" block>
+        <Button className="action-button" color="black" size="lg" block>
           Sit in the chair
         </Button>
-        <Button className="action-button" color="black" size="sm" block>
+        <Button className="action-button" color="black" size="lg" block>
           Exit to HALLWAY
         </Button>
       </div>

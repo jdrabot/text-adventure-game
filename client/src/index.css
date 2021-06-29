@@ -1,6 +1,8 @@
+
 body {
   margin: 0;
-  font-family: "Courier", monospace;
+  font-family: 'VT323';
+  font-size: 1.4em;
   -webkit-font-smoothing: none;
   background-color: black;
   color: rgb(115, 242, 61);
@@ -26,4 +28,5 @@ code {
 
 .cards {
   background-color: black;
+  border-color: rgb(115, 242, 61);
 }

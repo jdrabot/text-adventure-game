@@ -6,6 +6,7 @@ import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { StoreProvider } from './store/store';
+// import "./fonts/VT323-Regular.ttf";
 
 ReactDOM.render(
   <React.StrictMode>
