@@ -5,6 +5,7 @@ import {
   CardBody,
   CardTitle,
 } from "reactstrap";
+import characterAvatar from "./images/characters/mage.gif";
 
 const Character = () => {
   return (
@@ -14,7 +15,7 @@ const Character = () => {
           <CardBody>
             <CardTitle tag="h5">Name</CardTitle>
           </CardBody>
-          <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+          <img src={characterAvatar} alt="Card image cap" />
           <CardBody>
             <CardText>HP:</CardText>
           </CardBody>

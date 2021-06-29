@@ -71,7 +71,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div>
-        <h4>Castle of Madness</h4>
+        <h1>Castle of Madness</h1>
       </div>
     </nav>
   );

@@ -7,6 +7,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "reactstrap";
+import roomImage from "./images/locations/kitchen.jpeg";
 
 const Room = () => {
   return (
@@ -15,7 +16,7 @@ const Room = () => {
         <CardBody>
           <CardTitle tag="h5">Location</CardTitle>
         </CardBody>
-        <img width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+        <img src={roomImage} alt="Card image cap" />
         <CardBody>
           <CardText>DIALOG</CardText>
         </CardBody>
