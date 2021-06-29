@@ -5,8 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { StoreProvider } from './store/store';
-// import "./fonts/VT323-Regular.ttf";
+import { StoreProvider } from "./store/store";
 
 ReactDOM.render(
   <React.StrictMode>

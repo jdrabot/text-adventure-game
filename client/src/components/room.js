@@ -18,7 +18,7 @@ const Room = () => {
         </CardBody>
         <img src={roomImage} alt="Card image cap" />
         <CardBody>
-          <CardText>DIALOG</CardText>
+          <CardText id="text">Text</CardText>
         </CardBody>
       </Card>
     </div>
