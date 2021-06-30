@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import {
   Card,
   CardText,
@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import roomImage from "./images/locations/kitchen.jpeg";
 
-const Room = () => {
+const Room = ({  displayedNode  }) => {
   return (
     <div class="row justify-content-center align-items-center">
       <Card className="cards">
@@ -18,12 +18,11 @@ const Room = () => {
         </CardBody>
         <img src={roomImage} alt="Card image cap" />
         <CardBody>
-          <CardText id="text">Text</CardText>
+          <CardText id="text">{displayedNode.text}</CardText>
         </CardBody>
       </Card>
     </div>
   );
 };
-
 
 export default Room;

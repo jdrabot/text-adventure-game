@@ -4,21 +4,22 @@ import {
   Card, CardText, CardBody,
 } from 'reactstrap';
 
-const Action = () => {
+const Action = ({ displayedNode, setTextNodeId }) => {
+
   return (
     <div class="d-flex justify-content-around">
       <div>
-        <Button className="action-button" color="black" size="lg" block>
-          Inspect the cupboard
-        </Button>
-        <Button className="action-button" color="black" size="lg" block>
-          Sit in the chair
-        </Button>
-        <Button className="action-button" color="black" size="lg" block>
-          Exit to HALLWAY
-        </Button>
+        {displayedNode.options.map(obj => {
+          return (
+            <Button onClick={() => setTextNodeId(obj.nextText)} className="action-button" color="black" size="lg" block>
+              {obj.text}
+            </Button>
+          )
+        })
+
+        }
       </div>
-      <div>
+      {/* <div>
         <Card className="cards">
           <CardBody>
             <CardText>
@@ -27,7 +28,7 @@ const Action = () => {
             </CardText>
           </CardBody>
         </Card>
-      </div>
+      </div> */}
     </div>
   );
 };
