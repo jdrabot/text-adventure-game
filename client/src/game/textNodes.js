@@ -1,65 +1,107 @@
 export default [
+  //kitchen
   {
     id: 1,
-    text: "You wake up in a strange place...",
+    text: "You wake up in a strange place... it looks like a kitchen.",
     options: [
-      {
-        text: "Take goo",
-        setState: { blueGoo: true },
+        {
+            display: true,
+        text: "Open the cupboard",
         nextText: 2,
       },
-      {
-        text: "Leave the goo",
-        nextText: 2,
+        {
+            display: true,
+        text: "Open the icebox",
+        nextText: 3,
+      },
+        {
+            display: true,
+        text: "Inspect the table",
+        nextText: 4,
+      },
+        {
+            display: true,
+        text: "Leave this room",
+        nextText: 5,
       },
     ],
   },
   {
-    id: 2,
-    text: "You venture forth...",
+    id: 2, // how to erase "open cupboard"
+
+    text: "You look inside the cupboard and you find a few tarnished coins, a bronze key, and a shred of paper that kind of looks like a map",
     options: [
       {
-        text: "Trade goo for sword",
-        setState: { blueGoo: false, sword: true },
-        nextText: 3,
+        text: "Take the items",
+        display: true,
+            setInventory: {
+                items: { coins: true, bronzeKey: true, map1: true },
+                optionsToDisplayFalse: [0,1]
+        },
+        nextText: 1,
       },
-      {
-        text: "Trade goo for sword",
-        setState: { blueGoo: false, shield: true },
-        nextText: 3,
-      },
-      {
-        text: "Ignore the merchant",
-        nextText: 3,
-      },
+    {
+        display: true,
+        text: "Leave the items",
+        nextText: 1,
+        },
+        {
+            text: "there's nothing here",
+            nextText: 1,
+            display: false,
+    }
     ],
   },
   {
     id: 3,
-    text: "After leaving the merchant, you start to feel tired and stumble upon a small town next to a dangerous looking castle,",
+    text: "You open the icebox and find a half-empty mana potion and a jar of pickles",
     options: [
-      {
-        text: "Explore the castle",
-        nextText: 4,
+        {
+            display: true,
+            text: "take the potion and pickles",
+            setInventory: {
+                items: { mana: true, pickles: true },
+                optionsToDisplayFalse: [0,1]
+            },
+            nextText: 1,
       },
-      {
-        text: "Find a room to sleep at in the town",
-        nextText: 5,
-      },
-      {
-        text: "Find some hay in a stable to sleep in",
-        nextText: 6,
-      },
+        {
+            display: true,
+        text: "leave the items",
+        nextText: 1,
+        },
+        {
+            text: "there's nothing here",
+            nextText: 1,
+            display: false,
+    },
     ],
   },
   {
     id: 4,
-    text: "You are tired and fall asleep while exploring the castle and are killed by some terrible monster in you sleep",
+    text: "You inspect the table and find an ancient looking tome",
     options: [
-      {
-        text: "Restart",
+        {
+            display: true,
+        text: "take the book",
+            setInventory: {
+                items: { book: true },
+                optionsToDisplayFalse: [0,1]
+            },
         nextText: 1,
       },
+        {
+            display: true,
+        text: "leave the book",
+        nextText: 1,
+        },
+        {
+            text: "there's nothing here",
+            nextText: 1,
+            display: false,
+    },
     ],
   },
+
+  // armory
 ];

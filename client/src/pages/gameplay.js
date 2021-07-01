@@ -8,16 +8,20 @@ import textNodes from '../game/textNodes';
 
 function Gameplay() {
   console.log(textNodes);
-
+  const [textNodeMaster, setTextNodeMaster] = useState(textNodes);
   const [textNodeId, setTextNodeId] = useState(1);
-
-  const found = textNodes.find((val) => val.id === textNodeId);
-
-
+  const found = textNodeMaster.find((val) => {
+    console.log(val);
+    console.log(textNodeId);
+    return val.id === textNodeId;
+  });
+  console.log(found);
   const [displayedNode, setDisplayed] = useState(found);
+  const [inventory, setInventory] = useState({});
+
 
   useEffect(() => {
-    const found = textNodes.find((val) => val.id === textNodeId);
+    const found = textNodeMaster.find((val) => val.id === textNodeId);
     setDisplayed(found)
   }, [textNodeId])
 
@@ -26,8 +30,17 @@ function Gameplay() {
   return (
     <div>
       <Character />
-      <Room displayedNode={displayedNode}/>
-      <Action setDisplayed={setDisplayed} setTextNodeId={setTextNodeId} displayedNode={displayedNode} />
+      <Room displayedNode={displayedNode} />
+      <Action
+        textNodeId={textNodeId}
+        textNodeMaster={textNodeMaster}
+        setTextNodeMaster={setTextNodeMaster}
+        setInventory={setInventory}
+        inventory={inventory}
+        setDisplayed={setDisplayed}
+        setTextNodeId={setTextNodeId}
+        displayedNode={displayedNode}
+      />
     </div>
   );
 }
