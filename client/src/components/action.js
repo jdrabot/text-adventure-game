@@ -12,18 +12,18 @@ const Action = ({ displayedNode, textNodeId ,setTextNodeId, setInventory, invent
         ...obj.setInventory,
       });
 
-      const objIndex = textNodeMaster.findIndex(obj => obj.id === textNodeId)
+      const objIndex = textNodeMaster.findIndex((obj) => obj.id === textNodeId);
 
       const alteredObj = displayedNode;
-// need to toggle on other options
-      obj.setInventory.optionsToDisplayFalse.forEach(indexToChangeDisplay => {
-        alteredObj.options[indexToChangeDisplay].display = false;
-      });
+      // need to toggle on other options
+      // obj.setInventory.optionsToDisplayFalse.forEach(indexToChangeDisplay => {
+      //   alteredObj.options[indexToChangeDisplay].display = false;
+      // });
 
       setTextNodeMaster([
         ...textNodeMaster,
-        textNodeMaster[objIndex] = alteredObj
-      ])
+        (textNodeMaster[objIndex] = alteredObj),
+      ]);
     }
     setTextNodeId(obj.nextText);
   };
