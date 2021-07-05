@@ -10,6 +10,7 @@ import Signup from './pages/signUp';
 import Banner from "./components/banner";
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
+// import Title from "./pages/title";
 
 const App = () => {
   const history = useHistory();
@@ -38,6 +39,7 @@ const App = () => {
       {state.user ? (
         <Switch>
           <Route exact path="/" component={Gameplay} />
+          {/* <Route exact path="/" component={Title} /> */}
         </Switch>
       ) : (
         <Switch>

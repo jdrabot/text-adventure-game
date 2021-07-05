@@ -4,20 +4,53 @@ import {
   Card, CardText, CardBody,
 } from 'reactstrap';
 
-const Action = ({ displayedNode, setTextNodeId }) => {
+const Action = ({ displayedNode, textNodeId ,setTextNodeId, setInventory, inventory, setTextNodeMaster, textNodeMaster }) => {
+  const handleClick = (obj) => {
+    if (obj.setInventory) {
+      setInventory({
+        ...inventory,
+        ...obj.setInventory,
+      });
+
+      const objIndex = textNodeMaster.findIndex((obj) => obj.id === textNodeId);
+
+      const alteredObj = displayedNode;
+      // need to toggle on other options
+      // obj.setInventory.optionsToDisplayFalse.forEach(indexToChangeDisplay => {
+      //   alteredObj.options[indexToChangeDisplay].display = false;
+      // });
+
+      setTextNodeMaster([
+        ...textNodeMaster,
+        (textNodeMaster[objIndex] = alteredObj),
+      ]);
+    }
+    setTextNodeId(obj.nextText);
+  };
 
   return (
     <div class="d-flex justify-content-around">
       <div>
-        {displayedNode.options.map(obj => {
+        {displayedNode.options.map((obj) => {
+          if(!obj.display) return
           return (
-            <Button onClick={() => setTextNodeId(obj.nextText)} className="action-button" color="black" size="lg" block>
+            <Button
+    
+                       onClick={() => handleClick(obj)}
+   
+                        className="action-button"
+  
+                         color="black"
+
+                           size="lg"
+            
+               block
+            
+            >
               {obj.text}
             </Button>
-          )
-        })
-
-        }
+          );;
+        })}
       </div>
       {/* <div>
         <Card className="cards">

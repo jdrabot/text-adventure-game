@@ -86,6 +86,7 @@ router.post('/signup', async function (req, res, next) {
 router.post('/login', function (req, res, next) {
   passport.authenticate('local', function (err, user, info) {
     if (err) {
+      console.log(err);
       return next(err);
     }
 
@@ -95,6 +96,7 @@ router.post('/login', function (req, res, next) {
 
     req.logIn(user, function (err) {
       if (err) {
+        console.log(err);
         return next(err);
       }
 
@@ -105,7 +107,7 @@ router.post('/login', function (req, res, next) {
 
 router.get('/logout', function (req, res) {
   req.logout();
-  res.redirect('/');
+  res.status(200);
 });
 
 module.exports = router;
