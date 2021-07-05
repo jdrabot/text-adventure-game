@@ -107,6 +107,7 @@ export default [
 
   {
     id: 5,
+    // image change
     text: "You walk into what looks like an armory. There, you see a burly-looking gentleman who looks not the least bit surprised to see you. 'Hey! I see you've woken up! Sorry to put you in the kitchen, I hope you've had something to eat. By the way, what kind of adventurer are you anyway?",
     options: [
       {
@@ -127,6 +128,7 @@ export default [
     ],
   },
   {
+    // character image change PERMANENT
     id: 6,
     text: "Ah, so you're a warrior! Here, take these as you'll need them on your journey",
     options: [
@@ -193,6 +195,9 @@ export default [
         display: true,
         text: "Start Again?",
         nextText: 1,
+        setInventory: {
+          items: { shortsword: false, lightLeatherArmor: false, mageStaff: false, armorOfAgathyst: false, greatsword: false, chainmail: false, book: false, mana: false, pickles: false, coins: false, bronzeKey: false, map1: false },
+        },
       },
     ],
   },
@@ -235,6 +240,11 @@ export default [
         display: true,
         text: "inspect table",
         nextText: 17,
+      },
+      {
+        display: true,
+        text: "Exit into Hallway",
+        nextText: 10,
       }
     ],
   },
@@ -245,6 +255,7 @@ export default [
     options: [
       {
         text: "take the candle",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { redCandle: true },
@@ -259,6 +270,7 @@ export default [
     options: [
       {
         text: "take the items",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { mana2: true, bronzeKey2: true },
@@ -273,24 +285,27 @@ export default [
     options: [
       {
         text: "take the black candle",
-        nextText: 17,
+        display: true,
+        nextText: 12,
         setInventory: {
           items: { blackCandle: true },
         },
       },
       {
         text: "open the drawer",
+        display: true,
         nextText: 18,
       }
     ],
   },
   {
-    id: 1,
+    id: 18,
     text: "In the drawer, you find another piece of the map that looks like it lines up perfectly with the piece you already have.",
     display: true,
     options: [
       {
         text: "take the map piece",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { map2: true },
@@ -298,6 +313,18 @@ export default [
       },
     ],
   },
+  {
+    // cathedral... INTERACTION ask for help
+    id: 13,
+    text: "Cathedral",
+    options: [
+      {
+        display: true,
+        text: "Place candles in respective holders",
+        nextText: 19,
+      }
+    ]
+  }
   
   
   
