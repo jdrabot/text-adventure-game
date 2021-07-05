@@ -316,15 +316,40 @@ export default [
   {
     // cathedral... INTERACTION ask for help
     id: 13,
-    text: "Cathedral",
+    text: "Cathedral... dark priest",
     options: [
       {
         display: true,
         text: "Place candles in respective holders",
         nextText: 19,
       }
-    ]
-  }
+    ],
+  },
+  {
+    id: 19,
+    text: "The dark ritual has begun...",
+    options: [
+      {
+        display: true,
+        text: "Exit into hallway",
+        nextText: 10,
+      }
+    ],
+  },
+  {
+    // must have keys in inventoy to open door... required inventory
+    id: 14,
+    text: "Open the door with keys and you see a large portrait of a woman. The painting seems to be moving... Intruder... handmaids",
+    options: [
+      {
+        display: true,
+        text: "Begin battle"
+        // encounterCode
+      }
+    ],
+  },
+
+  // cut to end game credits
   
   
   
