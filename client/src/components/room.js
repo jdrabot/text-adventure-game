@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Card,
-  CardText,
-  CardBody,
-  CardLink,
-  CardTitle,
-  CardSubtitle,
-} from "reactstrap";
-import roomImage from "./images/locations/kitchen.jpeg";
+import { Card, CardText, CardBody, CardTitle } from "reactstrap";
 
 const Room = ({  displayedNode  }) => {
   return (
@@ -16,7 +8,12 @@ const Room = ({  displayedNode  }) => {
         <CardBody>
           <CardTitle tag="h5">Location</CardTitle>
         </CardBody>
-        <img src={roomImage} alt="Card image cap" />
+        <img
+          src={`${process.env.PUBLIC_URL ? process.env.PUBLIC_URL : 'http://localhost:3000'}${displayedNode.imgSrc}`}
+          alt="Card image cap"
+          width="500px"
+          class="center"
+        />
         <CardBody>
           <CardText id="text">{displayedNode.text}</CardText>
         </CardBody>

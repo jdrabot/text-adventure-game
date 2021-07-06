@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import { LOGIN, LOGOUT, SET_USER, UNSET_USER } from './actions';
+import { LOGIN, LOGOUT, SET_USER, UNSET_USER, SET_CHARACTER } from './actions';
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -26,6 +26,12 @@ const reducer = (state, action) => {
         user: null,
         loading: false,
       };
+    
+    case SET_CHARACTER:
+      return {
+        ...state,
+        character: action.character
+      }
 
     default:
       return state;
@@ -36,6 +42,12 @@ const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     user: null,
     loading: false,
+    character: {
+      class: "unknown",
+      imgSrc: '/images/characters/barbarian.gif',
+      HP: 1,
+      name: "travellor"
+    },
   });
 
   return <Provider value={[state, dispatch]} {...props} />;

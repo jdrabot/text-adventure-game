@@ -25,6 +25,7 @@ export default [
         nextText: 5,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
   },
   {
     id: 2, // how to erase "open cupboard"
@@ -36,8 +37,10 @@ export default [
         display: true,
         setInventory: {
           items: { coins: true, bronzeKey: true, map1: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -51,6 +54,8 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
   {
     id: 3,
@@ -61,8 +66,10 @@ export default [
         text: "take the potion and pickles",
         setInventory: {
           items: { mana: true, pickles: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -76,6 +83,8 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
   {
     id: 4,
@@ -86,8 +95,11 @@ export default [
         text: "take the book",
         setInventory: {
           items: { book: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -101,32 +113,49 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
 
   // armory
 
   {
     id: 5,
+    // image change
     text: "You walk into what looks like an armory. There, you see a burly-looking gentleman who looks not the least bit surprised to see you. 'Hey! I see you've woken up! Sorry to put you in the kitchen, I hope you've had something to eat. By the way, what kind of adventurer are you anyway?",
     options: [
       {
         display: true,
         text: "Warrior",
+        imgSrc: "/images/characters/barbarian.gif",
+        HP: 35,
         nextText: 6,
+        hitFunction: ["SET_CHARACTER"]
       },
       {
         display: true,
         text: "Mage",
+        imgSrc: "/images/characters/mage.gif",
+        HP: 20,
+
         nextText: 7,
+        hitFunction: ["SET_CHARACTER"]
+
       },
       {
         display: true,
         text: "Rogue",
+        imgSrc: "/images/characters/thief.gif",
+        HP: 25,
+
         nextText: 8,
+        hitFunction: ["SET_CHARACTER"]
+
       },
     ],
   },
   {
+    // character image change PERMANENT
     id: 6,
     text: "Ah, so you're a warrior! Here, take these as you'll need them on your journey",
     options: [
@@ -136,6 +165,8 @@ export default [
         setInventory: {
           items: { greatsword: true, chainmail: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -150,6 +181,8 @@ export default [
         setInventory: {
           items: { mageStaff: true, armorOfAgathyst: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -164,6 +197,8 @@ export default [
         setInventory: {
           items: { shortsword: true, lightLeatherArmor: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -193,6 +228,7 @@ export default [
         display: true,
         text: "Start Again?",
         nextText: 1,
+        hitFunction: ["RESTART"],
       },
     ],
   },
@@ -235,7 +271,12 @@ export default [
         display: true,
         text: "inspect table",
         nextText: 17,
-      }
+      },
+      {
+        display: true,
+        text: "Exit into Hallway",
+        nextText: 10,
+      },
     ],
   },
   {
@@ -245,10 +286,13 @@ export default [
     options: [
       {
         text: "take the candle",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { redCandle: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
@@ -259,10 +303,13 @@ export default [
     options: [
       {
         text: "take the items",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { mana2: true, bronzeKey2: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
@@ -273,372 +320,78 @@ export default [
     options: [
       {
         text: "take the black candle",
-        nextText: 17,
+        display: true,
+        nextText: 12,
         setInventory: {
           items: { blackCandle: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
       {
         text: "open the drawer",
+        display: true,
         nextText: 18,
-      }
+      },
     ],
   },
   {
-    id: 1,
+    id: 18,
     text: "In the drawer, you find another piece of the map that looks like it lines up perfectly with the piece you already have.",
     display: true,
     options: [
       {
         text: "take the map piece",
+        display: true,
         nextText: 12,
         setInventory: {
           items: { map2: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
+  {
+    // cathedral... INTERACTION ask for help
+    id: 13,
+    text: "Cathedral... dark priest",
+    options: [
+      {
+        display: true,
+        text: "Place candles in respective holders and light",
+        setInventory: {
+          items: { redCandle: false, blackCandle: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+
+        nextText: 19,
+      },
+    ],
+  },
+  {
+    id: 19,
+    text: "The dark ritual has begun...",
+    options: [
+      {
+        display: true,
+        text: "Exit into hallway",
+        nextText: 10,
+      },
+    ],
+  },
+  {
+    // must have keys in inventoy to open door... required inventory
+    id: 14,
+    text: "Open the door with keys and you see a large portrait of a woman. The painting seems to be moving... Intruder... handmaids",
+    options: [
+      {
+        display: true,
+        text: "Begin battle",
+        // encounterCode
+      },
+    ],
+  },
 ];
+
+  // cut to end game credits

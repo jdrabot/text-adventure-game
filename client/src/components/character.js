@@ -5,19 +5,22 @@ import {
   CardBody,
   CardTitle,
 } from "reactstrap";
-import characterAvatar from "./images/characters/mage.gif";
+import { useStoreContext } from "../store/store";
 
 const Character = () => {
+  const [state, dispatch] = useStoreContext();
+
+
   return (
     <div class="d-flex justify-content-around">
       <div>
         <Card className="cards" style={{ width: "150px", height: "150px" }}>
           <CardBody>
-            <CardTitle tag="h5">Name</CardTitle>
+            <CardTitle tag="h5">{state.character.name}</CardTitle>
           </CardBody>
-          <img src={characterAvatar} alt="Card image cap" />
+          <img src={state.character.imgSrc} alt="Card image cap" />
           <CardBody>
-            <CardText>HP:</CardText>
+            <CardText>HP: {state.character.HP}</CardText>
           </CardBody>
         </Card>
       </div>
