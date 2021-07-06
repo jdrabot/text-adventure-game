@@ -16,9 +16,29 @@ CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY
 );
 
-CREATE TABLE weapons (
+CREATE TABLE weapons_lvl_1 (
     weapon_name VARCHAR (25) UNIQUE NOT NULL,
     weapon_description VARCHAR (150) NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE weapons_lvl_2 (
+    weapon_name VARCHAR (25) UNIQUE NOT NULL,
+    weapon_description VARCHAR (150) NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE weapons_lvl_3 (
+    weapon_name VARCHAR (25) UNIQUE NOT NULL,
+    weapon_description VARCHAR (150) NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE black_chest (
+    weapon_name VARCHAR (25) UNIQUE NOT NULL,
+    weapon_description VARCHAR (150) NOT NULL,
+    item_name VARCHAR (25) UNIQUE NOT NULL,
+    item_description VARCHAR (150) NOT NULL,
     id INT AUTO_INCREMENT PRIMARY KEY
 );
 
