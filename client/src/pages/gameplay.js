@@ -8,6 +8,8 @@ import textNodes from '../game/textNodes';
 
 function Gameplay() {
   console.log(textNodes);
+  const [textNodeMasterConstant, setTextNodeMasterConstant] =
+    useState(textNodes);
   const [textNodeMaster, setTextNodeMaster] = useState(textNodes);
   const [textNodeId, setTextNodeId] = useState(1);
   const found = textNodeMaster.find((val) => {
@@ -32,6 +34,7 @@ function Gameplay() {
       <Character />
       <Room displayedNode={displayedNode} />
       <Action
+        textNodeMasterConstant={textNodeMasterConstant}
         textNodeId={textNodeId}
         textNodeMaster={textNodeMaster}
         setTextNodeMaster={setTextNodeMaster}

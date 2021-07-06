@@ -25,6 +25,7 @@ export default [
         nextText: 5,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
   },
   {
     id: 2, // how to erase "open cupboard"
@@ -36,8 +37,10 @@ export default [
         display: true,
         setInventory: {
           items: { coins: true, bronzeKey: true, map1: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -51,6 +54,8 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
   {
     id: 3,
@@ -61,8 +66,10 @@ export default [
         text: "take the potion and pickles",
         setInventory: {
           items: { mana: true, pickles: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -76,6 +83,8 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
   {
     id: 4,
@@ -86,8 +95,11 @@ export default [
         text: "take the book",
         setInventory: {
           items: { book: true },
-          optionsToDisplayFalse: [0, 1],
         },
+        hitFunction: ["SET_INVENTORY"],
+
+        optionsToDisplayFalse: [0, 1],
+        optionsToDisplayTrue: [2],
         nextText: 1,
       },
       {
@@ -101,6 +113,8 @@ export default [
         display: false,
       },
     ],
+    imgSrc: "/images/locations/pixelMother.png"
+
   },
 
   // armory
@@ -113,17 +127,30 @@ export default [
       {
         display: true,
         text: "Warrior",
+        imgSrc: "/images/characters/barbarian.gif",
+        HP: 35,
         nextText: 6,
+        hitFunction: ["SET_CHARACTER"]
       },
       {
         display: true,
         text: "Mage",
+        imgSrc: "/images/characters/mage.gif",
+        HP: 20,
+
         nextText: 7,
+        hitFunction: ["SET_CHARACTER"]
+
       },
       {
         display: true,
         text: "Rogue",
+        imgSrc: "/images/characters/thief.gif",
+        HP: 25,
+
         nextText: 8,
+        hitFunction: ["SET_CHARACTER"]
+
       },
     ],
   },
@@ -138,6 +165,8 @@ export default [
         setInventory: {
           items: { greatsword: true, chainmail: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -152,6 +181,8 @@ export default [
         setInventory: {
           items: { mageStaff: true, armorOfAgathyst: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -166,6 +197,8 @@ export default [
         setInventory: {
           items: { shortsword: true, lightLeatherArmor: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 9,
       },
     ],
@@ -195,9 +228,7 @@ export default [
         display: true,
         text: "Start Again?",
         nextText: 1,
-        setInventory: {
-          items: { shortsword: false, lightLeatherArmor: false, mageStaff: false, armorOfAgathyst: false, greatsword: false, chainmail: false, book: false, mana: false, pickles: false, coins: false, bronzeKey: false, map1: false },
-        },
+        hitFunction: ["RESTART"],
       },
     ],
   },
@@ -245,7 +276,7 @@ export default [
         display: true,
         text: "Exit into Hallway",
         nextText: 10,
-      }
+      },
     ],
   },
   {
@@ -260,6 +291,8 @@ export default [
         setInventory: {
           items: { redCandle: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
@@ -275,6 +308,8 @@ export default [
         setInventory: {
           items: { mana2: true, bronzeKey2: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
@@ -290,12 +325,14 @@ export default [
         setInventory: {
           items: { blackCandle: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
       {
         text: "open the drawer",
         display: true,
         nextText: 18,
-      }
+      },
     ],
   },
   {
@@ -310,6 +347,8 @@ export default [
         setInventory: {
           items: { map2: true },
         },
+        hitFunction: ["SET_INVENTORY"],
+
       },
     ],
   },
@@ -320,9 +359,14 @@ export default [
     options: [
       {
         display: true,
-        text: "Place candles in respective holders",
+        text: "Place candles in respective holders and light",
+        setInventory: {
+          items: { redCandle: false, blackCandle: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+
         nextText: 19,
-      }
+      },
     ],
   },
   {
@@ -333,7 +377,7 @@ export default [
         display: true,
         text: "Exit into hallway",
         nextText: 10,
-      }
+      },
     ],
   },
   {
@@ -343,354 +387,11 @@ export default [
     options: [
       {
         display: true,
-        text: "Begin battle"
+        text: "Begin battle",
         // encounterCode
-      }
+      },
     ],
   },
+];
 
   // cut to end game credits
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  ,
-];
