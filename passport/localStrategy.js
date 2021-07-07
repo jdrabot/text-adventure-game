@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
 
-const User = require('../models').User;
+const User = require("../models/user");
 
 const strategy = new LocalStrategy(
   {
@@ -8,21 +8,24 @@ const strategy = new LocalStrategy(
     passwordField: 'password',
   },
   async function (email, password, done) {
-    const user = await User.findOne({
-      where: {
-        email: email,
-      },
-    });
-
-    if (user == null) {
-      return done(null, false, { message: 'Incorrect email.' });
+    try {
+      const user = await User.findOne({
+        email
+      });
+  
+      if (user == null) {
+        return done(null, false, { message: 'Incorrect email.' });
+      }
+  
+      if (!user.checkPassword(password)) {
+        return done(null, false, { message: "Incorrect password." });
+      }
+  
+      return done(null, user);
+    } catch (err) {
+      console.log(err)
     }
 
-    if (!user.checkPassword(password)) {
-      return done(null, false, { message: "Incorrect password." });
-    }
-
-    return done(null, user);
   }
 );
 

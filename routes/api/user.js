@@ -5,9 +5,8 @@ const router = express.Router();
 const { User } = require('../../models');
 const passport = require('../../passport');
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
   const { email, password } = req.body;
-
   User.findOne({ email }, (err, user) => {
     if (err) {
       console.log('User Create Error: ', err);
@@ -27,8 +26,10 @@ router.post('/', (req, res) => {
     });
 
     newUser.save((err, savedUser) => {
-      if (err) return res.json(err);
-
+      if (err) {
+        console.log(err);
+        return res.json(err)
+      };
       res.json(savedUser);
     });
   });

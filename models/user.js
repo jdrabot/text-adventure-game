@@ -18,6 +18,7 @@ const userSchema = new Schema({
     savedGames: [
         {
             textNode: [],
+            testNodeId: Number,
             charcter: {
                 name: String,
                 class: String,
@@ -37,7 +38,7 @@ userSchema.methods = {
         return bcrypt.compareSync(inputPassword, this.password);
     },
     hashPassword: (plainTextPassword) => {
-        return bcryt.hashSync(plainTextPassword, 10);
+        return bcrypt.hashSync(plainTextPassword, 10);
     }
 };
 
