@@ -9,22 +9,22 @@ const imgRoot = process.env.PUBLIC_URL
 
 const Room = ({  displayedNode  }) => {
   return (
-    <div class="row justify-content-center align-items-top" >
+    <div class="row justify-content-center align-items-top">
       <div>
-        <Character  />
+        <Character />
       </div>
       <Card className="roomCard">
         <img
           src={`${imgRoot}${displayedNode.imgSrc}`}
           alt="Card image cap"
-          width="500px"
+          width="622px"
+          height="350px"
           class="center"
         />
         <CardBody>
           <CardText id="text">{displayedNode.text}</CardText>
         </CardBody>
       </Card>
-      
     </div>
   );
 };

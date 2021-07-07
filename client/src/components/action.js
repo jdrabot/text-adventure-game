@@ -90,7 +90,6 @@ const Action = ({
               className="action-button"
               color="black"
               size="lg"
-              // block
             >
               {obj.text}
             </Button>

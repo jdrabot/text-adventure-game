@@ -34,9 +34,10 @@ code {
 
 .roomCard {
   background-color: black;
-  max-width: 500px;
+  max-width: 622px;
+  min-width: 622px;
   vertical-align: text-top;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .center {
