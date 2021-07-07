@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Banner from "./banner";
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { LOADING, UNSET_USER } from '../store/actions';

@@ -31,7 +31,6 @@ function Gameplay() {
 
   return (
     <div>
-      <Character />
       <Room displayedNode={displayedNode} />
       <Action
         textNodeMasterConstant={textNodeMasterConstant}

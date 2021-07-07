@@ -1,13 +1,17 @@
 import React from "react";
-// import { Redirect } from "react-router";
-import bannerImage from "./images/bannerImage/banner.gif";
+const imgRoot = process.env.PUBLIC_URL
+  ? process.env.PUBLIC_URL
+  : "http://localhost:3000";
 
 
 
 function Banner() {
   return (
     <div>
-      <img src={bannerImage} className="banner" />
+      <img
+        src={`${imgRoot}/images/bannerImage/banner.gif`}
+        className="banner"
+      />
     </div>
   );
 }

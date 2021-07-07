@@ -1,8 +1,5 @@
 import React from "react";
-import { Button } from 'reactstrap';
-import {
-  Card, CardText, CardBody,
-} from 'reactstrap';
+import { Button } from "reactstrap";
 import { useStoreContext } from '../store/store';
 import { SET_CHARACTER } from '../store/actions';
 
@@ -83,32 +80,23 @@ const Action = ({
 
   return (
     <div class="d-flex justify-content-around">
-      <div>
+      <div class="btn">
         {displayedNode.options.map((obj) => {
           if (!obj.display) return;
           return (
             <Button
+              // style="margin:5px"
               onClick={() => handleClick(obj)}
               className="action-button"
               color="black"
               size="lg"
-              block
+              // block
             >
               {obj.text}
             </Button>
           );
         })}
       </div>
-      {/* <div>
-        <Card className="cards">
-          <CardBody>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-          </CardBody>
-        </Card>
-      </div> */}
     </div>
   );
 };
