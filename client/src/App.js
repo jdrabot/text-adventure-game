@@ -7,6 +7,7 @@ import Home from './pages/home';
 import Gameplay from "./pages/gameplay";
 import Login from './pages/login';
 import Signup from './pages/signUp';
+import Title from "./pages/title";
 import Banner from "./components/banner";
 import { LOADING, SET_USER, UNSET_USER } from './store/actions';
 import { useStoreContext } from './store/store';
@@ -39,10 +40,10 @@ const App = () => {
       {state.user ? (
         <Switch>
           <Route exact path="/" component={Gameplay} />
-          {/* <Route exact path="/" component={Title} /> */}
         </Switch>
       ) : (
         <Switch>
+          <Route exact path="/title" component={Title} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Redirect to="/login" />

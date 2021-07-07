@@ -44,9 +44,9 @@ const StoreProvider = ({ value = [], ...props }) => {
     loading: false,
     character: {
       class: "unknown",
-      imgSrc: '/images/characters/barbarian.gif',
+      imgSrc: "/images/characters/barbarian.gif",
       HP: 1,
-      name: "travellor"
+      name: "traveler",
     },
   });
 
