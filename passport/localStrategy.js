@@ -18,7 +18,7 @@ const strategy = new LocalStrategy(
       return done(null, false, { message: 'Incorrect email.' });
     }
 
-    if (!user.comparePassword(password)) {
+    if (!user.checkPassword(password)) {
       return done(null, false, { message: "Incorrect password." });
     }
 

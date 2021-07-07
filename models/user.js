@@ -1,39 +1,55 @@
-'use strict';
-const { Model, DataTypes } = require('sequelize');
+const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-const sequelize = require("../config/connection");
 
-class User extends Model {
+const Schema = mongoose.Schema;
+mongoose.promise = Promise;
 
-  comparePassword(givenPassword) {
-    return bcrypt.compareSync(givenPassword, this.password)
-  }
-
-  static associate(models) {
-    // define association here
-  }
-}
-
-User.init(
-  {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    last_login: DataTypes.DATE,
-  },
-  {
-    hooks: {
-      beforeCreate: async (userData) => {
-        userData.password = await bcrypt.hash(userData.password, 10);
-        return userData;
-      },
-      beforeUpdate: async (userData) => {
-        userData.password = await bcrypt.hash(userData.password, 10);
-        return userData;
-      },
+const userSchema = new Schema({
+    password: {
+        type: String,
+        unique: true,
+        required: true
     },
-    sequelize,
-    modelName: 'User',
-  }
-);
+    email: {
+        type: String,
+        unique: true,
+        required: true
+    },
+    savedGames: [
+        {
+            textNode: [],
+            charcter: {
+                name: String,
+                class: String,
+                HP: Number
+            },
+            dateCreated: {
+                type: Date,
+                default: Date.now()
+            },
+            dateUpdated: Date
+        }
+    ]
+});
+
+userSchema.methods = {
+    checkPassword: function (inputPassword) {
+        return bcrypt.compareSync(inputPassword, this.password);
+    },
+    hashPassword: (plainTextPassword) => {
+        return bcryt.hashSync(plainTextPassword, 10);
+    }
+};
+
+userSchema.pre('save', function (next) {
+    if (!this.password) {
+        console.log("no password provided");
+    } else {
+        this.password = this.hashPassword(this.password);
+        next()
+    }
+});
+
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
