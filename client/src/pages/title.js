@@ -1,32 +1,35 @@
 import React from "react";
-import kaboom from "https://kaboomjs.com/lib/0.5.1/kaboom.mjs";
+import kaboom from "kaboom";
+const imgRoot = process.env.PUBLIC_URL
+  ? process.env.PUBLIC_URL
+  : "http://localhost:3000";
 
 function Title() {
-  kaboom({
+  const k = kaboom({
     global: true,
     fullscreen: true,
     scale: 2,
   });
 
-  loadRoot("../images/");
-  loadSprite("sword", "sword.png");
+  k.loadRoot(`${imgRoot}/images/sword.png`);
+  k.loadSprite("sword", "sword.png");
 
-  scene("main", () => {
-    const mark = add([
-      sprite("sword"),
-      pos(width() / 2, height() / 2),
-      scale(10),
-      rotate(0),
-      origin("center"),
+  k.scene("main", () => {
+    const mark = k.add([
+      k.sprite("sword"),
+      k.pos(k.width() / 2, k.height() / 2),
+      k.scale(10),
+      k.rotate(0),
+      k.origin("center"),
     ]);
 
     mark.action(() => {
-      mark.scale = Math.sin(time()) * 10;
-      mark.angle += dt();
+      mark.scale = Math.sin(k.time()) * 10;
+      mark.angle += k.dt();
     });
   });
 
-  start("main");
+  k.start("main");
 }
 
 export default Title;
