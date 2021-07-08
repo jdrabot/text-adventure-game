@@ -1,4 +1,3 @@
-import React from "react";
 import kaboom from "kaboom";
 const imgRoot = process.env.PUBLIC_URL
   ? process.env.PUBLIC_URL

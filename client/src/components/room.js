@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Card, CardText, CardBody, CardTitle } from "reactstrap";
+import React from "react";
+import { Card, CardText, CardBody } from "reactstrap";
 import Character from "./character";
 const imgRoot = process.env.PUBLIC_URL
   ? process.env.PUBLIC_URL
   : "http://localhost:3000";
 
-
-
-const Room = ({  displayedNode  }) => {
+const Room = ({ displayedNode }) => {
   return (
     <div class="row justify-content-center align-items-top">
       <div>
