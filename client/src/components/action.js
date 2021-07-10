@@ -64,9 +64,10 @@ const Action = ({
                 ...state.character,
                 class: obj.text,
                 imgSrc: obj.imgSrc,
-                HP: obj.HP
-              }
-            })
+                HP: obj.HP,
+                name: obj.name,
+              },
+            });
             
             break;
           

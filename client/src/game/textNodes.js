@@ -7,6 +7,18 @@ export default [
     options: [
       {
         display: true,
+        text: "Next",
+        nextText: 101,
+      },
+    ],
+    imgSrc: "/images/locations/kitchen.jpeg",
+  },
+  {
+    id: 101,
+    text: "You can see a dusty cupboard, an icebox, and a table in front of you. To your left is a door. Who knows where that leads?",
+    options: [
+      {
+        display: true,
         text: "Open the cupboard",
         nextText: 2,
       },
@@ -129,21 +141,25 @@ export default [
         HP: 35,
         nextText: 6,
         hitFunction: ["SET_CHARACTER"],
+        name: "Wally Warrior",
       },
       {
         display: true,
         text: "Mage",
         imgSrc: "/images/characters/mage.gif",
         HP: 20,
+        name: "Mindy Mage",
 
         nextText: 7,
         hitFunction: ["SET_CHARACTER"],
+        
       },
       {
         display: true,
         text: "Rogue",
         imgSrc: "/images/characters/thief.gif",
         HP: 25,
+        name: "Roger Rogue",
 
         nextText: 8,
         hitFunction: ["SET_CHARACTER"],
@@ -357,7 +373,7 @@ export default [
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-                            // cathedral
+    // cathedral
     id: 13,
     text: "Cathedral... dark priest",
     options: [
