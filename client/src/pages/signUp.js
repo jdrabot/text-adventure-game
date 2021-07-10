@@ -37,13 +37,13 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log('ERROR', error);
-        setErrorMsg(error)
+        setErrorMsg(error.message)
       });
   };
 
   return (
     <div className="text-center">
-      {errorMsg ? 
+      {errorMsg ?
         <p>{errorMsg}</p> :
         null
       }
@@ -75,7 +75,7 @@ const SignUp = () => {
         />
         <div>
           <button className="action-button" type="submit" onClick={handleSubmit}>
-              Sign Up
+            Sign Up
           </button>
         </div>
       </form>
