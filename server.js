@@ -19,18 +19,24 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/text_adventure_game',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  })
-  .then(() => {
-    console.log("Connected to Mongoose")
-  }, (err) => {
-    console.log(`Mongoose connection err:\n${err}`)
-  });
+mongoose
+  .connect(
+    process.env.MONGODB_URI || "mongodb://localhost/text_adventure_game",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    }
+  )
+  .then(
+    () => {
+      console.log("Connected to Mongoose");
+    },
+    (err) => {
+      console.log(`Mongoose connection err:\n${err}`);
+    }
+  );
 
 app.use(
   session({
