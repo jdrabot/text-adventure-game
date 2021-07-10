@@ -54,16 +54,16 @@ export default [
         hitFunction: ["SET_INVENTORY"],
         optionsToDisplayFalse: [0, 1],
         optionsToDisplayTrue: [2],
-        nextText: 1,
+        nextText: 101,
       },
       {
         display: true,
         text: "Leave the items",
-        nextText: 1,
+        nextText: 101,
       },
       {
         text: "there's nothing here",
-        nextText: 1,
+        nextText: 101,
         display: false,
       },
     ],
@@ -82,16 +82,16 @@ export default [
         hitFunction: ["SET_INVENTORY"],
         optionsToDisplayFalse: [0, 1],
         optionsToDisplayTrue: [2],
-        nextText: 1,
+        nextText: 101,
       },
       {
         display: true,
         text: "leave the items",
-        nextText: 1,
+        nextText: 101,
       },
       {
         text: "there's nothing here",
-        nextText: 1,
+        nextText: 101,
         display: false,
       },
     ],
@@ -111,16 +111,16 @@ export default [
 
         optionsToDisplayFalse: [0, 1],
         optionsToDisplayTrue: [2],
-        nextText: 1,
+        nextText: 101,
       },
       {
         display: true,
         text: "leave the book",
-        nextText: 1,
+        nextText: 101,
       },
       {
         text: "there's nothing here",
-        nextText: 1,
+        nextText: 101,
         display: false,
       },
     ],
@@ -152,7 +152,7 @@ export default [
 
         nextText: 7,
         hitFunction: ["SET_CHARACTER"],
-        
+
       },
       {
         display: true,
@@ -415,6 +415,7 @@ export default [
     ],
     imgSrc: "/images/locations/pixelMother.png",
   },
+
 ];
 
   // cut to end game credits
