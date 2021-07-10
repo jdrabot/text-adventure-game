@@ -1,9 +1,8 @@
-import axios from 'axios';
-import Banner from "./banner";
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { LOADING, UNSET_USER } from '../store/actions';
-import { useStoreContext } from '../store/store';
+import axios from "axios";
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import { LOADING, UNSET_USER } from "../store/actions";
+import { useStoreContext } from "../store/store";
 
 const Navbar = () => {
   const [state, dispatch] = useStoreContext();
@@ -15,15 +14,15 @@ const Navbar = () => {
     dispatch({ type: LOADING });
 
     axios
-      .get('/api/users/logout')
+      .get("/api/users/logout")
       .then((response) => {
         if (response.status === 200) {
           dispatch({ type: UNSET_USER });
-          history.replace('/login');
+          history.replace("/login");
         }
       })
       .catch((error) => {
-        console.log('Logout error');
+        console.log("Logout error");
       });
   };
 

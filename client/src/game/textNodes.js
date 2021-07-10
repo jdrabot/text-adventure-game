@@ -132,11 +132,23 @@ export default [
   {
     id: 5,
     // image change
-    text: "You walk into what looks like an armory. There, you see a burly-looking gentleman who looks not the least bit surprised to see you. 'Hey! I see you've woken up! Sorry to put you in the kitchen, I hope you've had something to eat. By the way, what kind of adventurer are you anyway?",
+    text: "You walk into what looks like an armory. There, you see a burly- looking gentleman who looks not the least bit surprised to see you.",
     options: [
       {
         display: true,
-        text: "Warrior",
+        text: "Talk to the burly looking gentleman",
+        nextText: 102,
+      },
+    ],
+    imgSrc: "/images/locations/pixelArmory.png",
+  },
+  {
+    id: 102,
+    text: "Hey! I see you've woken up! Sorry to put you in the kitchen, I hope you've had something to eat. By the way, who are you anyway?",
+    options: [
+      {
+        display: true,
+        text: "Wally Warrior",
         imgSrc: "/images/characters/barbarian.gif",
         HP: 35,
         nextText: 6,
@@ -145,18 +157,17 @@ export default [
       },
       {
         display: true,
-        text: "Mage",
+        text: "Mindy Mage",
         imgSrc: "/images/characters/mage.gif",
         HP: 20,
         name: "Mindy Mage",
 
         nextText: 7,
         hitFunction: ["SET_CHARACTER"],
-
       },
       {
         display: true,
-        text: "Rogue",
+        text: "Roger Rogue",
         imgSrc: "/images/characters/thief.gif",
         HP: 25,
         name: "Roger Rogue",
@@ -165,12 +176,12 @@ export default [
         hitFunction: ["SET_CHARACTER"],
       },
     ],
+    // need to change to burly gentleman photo
     imgSrc: "/images/locations/pixelArmory.png",
   },
   {
-    // character image change PERMANENT
     id: 6,
-    text: "Ah, so you're a warrior! Here, take these as you'll need them on your journey",
+    text: "Ah, so you're Wally Warrior! I've heard of you... You're a hero! I think you'll want to take these if you're planning on venturing further",
     options: [
       {
         display: true,
@@ -187,7 +198,7 @@ export default [
   },
   {
     id: 7,
-    text: "Ah, so you're a mage! Here, take these as you'll need them on your journey",
+    text: "Ah, so you're Mindy Mage! I've heard of you... You're a hero! I think you'll want to take these if you're planning on venturing further",
     options: [
       {
         display: true,
@@ -204,7 +215,7 @@ export default [
   },
   {
     id: 8,
-    text: "Ah, so you're a rogue! Here, take these as you'll need them on your journey",
+    text: "Ah, so you're Roger Rogue! I've heard of you... You're a hero! I think you'll want to take these if you're planning on venturing further",
     options: [
       {
         display: true,
@@ -221,7 +232,7 @@ export default [
   },
   {
     id: 9,
-    text: "Good luck, traveller!",
+    text: "Make sure you scour each room for items to use on this quest. Beware, though, good traveler, not all items are helpful. Some prove to be more trouble than they're worth!",
     options: [
       {
         display: true,
@@ -234,6 +245,7 @@ export default [
         nextText: 11,
       },
     ],
+    // burly gentleman
     imgSrc: "/images/locations/pixelArmory.png",
   },
   {
@@ -248,25 +260,38 @@ export default [
         hitFunction: ["RESTART"],
       },
     ],
+    // attack splash
     imgSrc: "/images/locations/pixelArmory.png",
   },
   {
     id: 10,
-    text: "You open the door and step out into a hallway.  You can see three doors. The door you just came out of, one other door on the right, one door to your left. At the end of the hallway is a larger, more ornate door with what appears to be keyholes on it",
+    text: "You crack open the door and step out into a dark, stone-walled hallway.",
     options: [
       {
         display: true,
-        text: "Choose the door on the left",
+        text: "Next",
+        nextText: 103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelHall.png",
+  },
+  {
+    id: 103,
+    text: "It smells musty and you can hear shuffling behind some of these doors. You wonder what fresh hell awaits you...",
+    options: [
+      {
+        display: true,
+        text: "Open the door on the left",
         nextText: 12,
       },
       {
         display: true,
-        text: "Choose the door on the right",
+        text: "Open the door on the right",
         nextText: 13,
       },
       {
         display: true,
-        text: "Choose the door at the end of the hallway",
+        text: "Open the door at the end of the hallway",
         nextText: 14,
       },
     ],
@@ -415,7 +440,6 @@ export default [
     ],
     imgSrc: "/images/locations/pixelMother.png",
   },
-
 ];
 
   // cut to end game credits
