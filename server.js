@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/text_adventure_game',
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/text_adventure_game',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
