@@ -1,7 +1,7 @@
 import kaboom from "kaboom";
 const imgRoot = process.env.PUBLIC_URL
   ? process.env.PUBLIC_URL
-  : "https://safe-cliffs-00867.herokuapp.com/";
+  : "https://safe-cliffs-00867.herokuapp.com//images/bannerImage/banner.gif";
 
 function Title() {
   const k = kaboom({
