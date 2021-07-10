@@ -19,7 +19,13 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/text_adventure_game')
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/text_adventure_game',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  })
   .then(() => {
     console.log("Connected to Mongoose")
   }, (err) => {
@@ -28,7 +34,7 @@ mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/text_adventure_
 
 app.use(
   session({
-    secret: process.env._SECRET,
+    secret: process.env.DB_SECRET,
     store: new MongoStore({
       mongooseConnection: mongoose.connection
     }),
