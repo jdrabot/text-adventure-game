@@ -46,7 +46,7 @@ const StoreProvider = ({ value = [], ...props }) => {
       class: "unknown",
       imgSrc: "/images/characters/unknown.gif",
       HP: 1,
-      name: "traveller",
+      name: "traveler",
     },
   });
 
