@@ -1,7 +1,7 @@
 import React from "react";
 const imgRoot = process.env.PUBLIC_URL
   ? process.env.PUBLIC_URL
-  : "http://localhost:3000";
+  : "https://safe-cliffs-00867.herokuapp.com/";
 
 
 
