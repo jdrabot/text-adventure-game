@@ -11,7 +11,7 @@ export default [
         nextText: 101,
       },
     ],
-    imgSrc: "/images/locations/kitchen.jpeg",
+    imgSrc: "/images/locations/pixelKitchen.png",
   },
   {
     id: 101,
@@ -38,7 +38,7 @@ export default [
         nextText: 5,
       },
     ],
-    imgSrc: "/images/locations/kitchen.jpeg",
+    imgSrc: "/images/locations/pixelKitchen.png",
   },
   {
     id: 2, // how to erase "open cupboard"
@@ -67,7 +67,7 @@ export default [
         display: false,
       },
     ],
-    imgSrc: "/images/locations/kitchen.jpeg",
+    imgSrc: "/images/locations/pixelKitchen.png",
   },
   {
     id: 3,
@@ -95,7 +95,7 @@ export default [
         display: false,
       },
     ],
-    imgSrc: "/images/locations/kitchen.jpeg",
+    imgSrc: "/images/locations/pixelKitchen.png",
   },
   {
     id: 4,
@@ -124,7 +124,7 @@ export default [
         display: false,
       },
     ],
-    imgSrc: "/images/locations/kitchen.jpeg",
+    imgSrc: "/images/locations/pixelKitchen.png",
   },
 
   // armory
@@ -140,7 +140,7 @@ export default [
         nextText: 102,
       },
     ],
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelArm.png",
   },
   {
     id: 102,
@@ -177,7 +177,7 @@ export default [
       },
     ],
     // need to change to burly gentleman photo
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
   {
     id: 6,
@@ -194,7 +194,7 @@ export default [
         nextText: 9,
       },
     ],
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
   {
     id: 7,
@@ -211,7 +211,7 @@ export default [
         nextText: 9,
       },
     ],
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
   {
     id: 8,
@@ -228,7 +228,7 @@ export default [
         nextText: 9,
       },
     ],
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
 
   //////// WALLY WARRIOR
@@ -249,7 +249,7 @@ export default [
       },
     ],
     // burly gentleman
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
   {
     id: 11,
@@ -264,7 +264,7 @@ export default [
       },
     ],
     // attack splash
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelPow.png",
   },
   {
     id: 10,
@@ -276,7 +276,7 @@ export default [
         nextText: 103,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
     id: 103,
@@ -416,7 +416,7 @@ export default [
         nextText: 19,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelCathedral.png",
   },
   {
     id: 19,
@@ -428,7 +428,7 @@ export default [
         nextText: 10,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelPriest.png",
   },
   {
     // must have keys in inventoy to open door... required inventory
@@ -441,14 +441,10 @@ export default [
         // encounterCode
       },
     ],
-    imgSrc: "/images/locations/pixelMother.png",
+    imgSrc: "/images/locations/pixelBedroom.png",
   },
 
-
   // cut to end game credits
-
-
-
 
   //////// MINDY MAGE
 
@@ -468,7 +464,7 @@ export default [
       },
     ],
     // burly gentleman
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelDude.png",
   },
   {
     id: 11,
@@ -483,7 +479,7 @@ export default [
       },
     ],
     // attack splash
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelPow.png",
   },
   {
     id: 10,
@@ -495,7 +491,7 @@ export default [
         nextText: 103,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
     id: 103,
@@ -517,7 +513,7 @@ export default [
         nextText: 14,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
     id: 12,
@@ -635,7 +631,7 @@ export default [
         nextText: 19,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelCathedral.png",
   },
   {
     id: 19,
@@ -647,7 +643,7 @@ export default [
         nextText: 10,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelPriest.png",
   },
   {
     // must have keys in inventoy to open door... required inventory
@@ -660,12 +656,8 @@ export default [
         // encounterCode
       },
     ],
-    imgSrc: "/images/locations/pixelMother.png",
+    imgSrc: "/images/locations/pixelBedroom.png",
   },
-
-
-
-
 
   //////// ROGER ROGUE
 
@@ -685,7 +677,7 @@ export default [
       },
     ],
     // burly gentleman
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelArm.png",
   },
   {
     id: 11,
@@ -700,7 +692,7 @@ export default [
       },
     ],
     // attack splash
-    imgSrc: "/images/locations/pixelArmory.png",
+    imgSrc: "/images/locations/pixelPow.png",
   },
   {
     id: 10,
@@ -712,7 +704,7 @@ export default [
         nextText: 103,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
     id: 103,
@@ -734,7 +726,7 @@ export default [
         nextText: 14,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
     id: 12,
@@ -848,11 +840,11 @@ export default [
           items: { redCandle: false, blackCandle: false },
         },
         hitFunction: ["SET_INVENTORY"],
-  
+
         nextText: 19,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelCathedral.png",
   },
   {
     id: 19,
@@ -864,7 +856,7 @@ export default [
         nextText: 10,
       },
     ],
-    imgSrc: "/images/locations/pixelCath.png",
+    imgSrc: "/images/locations/pixelPriest.png",
   },
   {
     // must have keys in inventoy to open door... required inventory
@@ -877,7 +869,6 @@ export default [
         // encounterCode
       },
     ],
-    imgSrc: "/images/locations/pixelMother.png",
+    imgSrc: "/images/locations/pixelBedroom.png",
   },
-    
 ];
