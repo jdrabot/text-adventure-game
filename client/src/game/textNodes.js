@@ -294,7 +294,7 @@ export default [
       {
         display: true,
         text: "Go to the door at the end of the hallway",
-        nextText: 614,
+        nextText: 621,
       },
     ],
     imgSrc: "/images/locations/pixelHallway.png",
@@ -474,17 +474,63 @@ export default [
   },
   {
     // must have keys in inventoy to open door... required inventory
-    id: 14,
-    text: "Open the door with keys and you see a large portrait of a woman. The painting seems to be moving... Intruder... handmaids",
+    id: 621,
+    text: "In front of you, you see a large, gated door with two keyholes",
     options: [
       {
         display: true,
-        text: "Begin battle",
-        // encounterCode
+        text: "Use the bronze keys to open the door",
+        setInventory: {
+          items: { bronzeKey: false, bronzeKey2: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 614,
+      },
+      {
+        display: true,
+        text: "Go back to the beginning of the hallway",
+        nextText: 6103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelEndDoor.png",
+  },
+  {
+    id: 614,
+    text: "You open the door and walk into what appears to be a woman's bedroom. An evil looking portrait hangs on the wall. You also see a dresser with the door cracked open and a large, open wooden chest.",
+    options: [
+      {
+        display: true,
+        text: "Inspect the dresser",
+        nextText: 622,
+      },
+      {
+        display: true,
+        text: "Inspect the chest",
+        nextText: 622,
+      },
+      {
+        display: true,
+        text: "Inspect the portrait",
+        nextText: 622,
       },
     ],
     imgSrc: "/images/locations/pixelBedroom.png",
   },
+  {
+    id: 622,
+    text: "Suddenly, the portrait begins to groan...'Who has disturbed my slumber?",
+    options: [
+      {
+        display: true,
+        text: "Get ready to battle!",
+        nextText: 623,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPainting.png",
+  },
+  {
+    
+  }
 
   // cut to end game credits
 
