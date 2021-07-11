@@ -245,6 +245,14 @@ export default [
         display: true,
         text: "Attack the burly-looking gentleman",
         nextText: 611,
+        imgSrc: "/images/characters/unknown.gif",
+        HP: 1,
+        hitFunction: ["SET_CHARACTER"],
+        name: "Traveler",
+        setInventory: {
+          items: {},
+        },
+        hitFunction: ["SET_INVENTORY"],
       },
     ],
     // burly gentleman
@@ -260,14 +268,6 @@ export default [
         text: "Start Again?",
         nextText: 1,
         hitFunction: ["RESTART"],
-        imgSrc: "/images/characters/unknown.gif",
-        HP: 1,
-        hitFunction: ["SET_CHARACTER"],
-        name: "Traveler",
-        setInventory: {
-          items: {},
-        },
-        hitFunction: ["SET_INVENTORY"],
       },
     ],
     // attack splash
