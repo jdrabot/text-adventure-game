@@ -544,7 +544,7 @@ export default [
         text: "Next",
         nextText: 624,
         imgSrc: "/images/characters/barbarian.gif",
-        HP=HP-10,
+        HP: HP - 10,
         nextText: 6,
         hitFunction: ["SET_CHARACTER"],
         name: "Wally Warrior",
@@ -562,7 +562,7 @@ export default [
         nextText: 625,
       },
     ],
-    imgSrc: "/images/locations/pixelMomReal.png"
+    imgSrc: "/images/locations/pixelMomReal.png",
   },
 
   // cut to end game credits
