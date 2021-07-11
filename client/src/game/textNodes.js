@@ -450,6 +450,8 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
         HP: 30,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally Warrior",
         nextText: 620,
         hitFunction: ["SET_CHARACTER"],
       },
