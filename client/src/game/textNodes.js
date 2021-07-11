@@ -545,7 +545,6 @@ export default [
         nextText: 624,
         imgSrc: "/images/characters/barbarian.gif",
         HP: 20,
-        nextText: 6,
         hitFunction: ["SET_CHARACTER"],
         name: "Wally Warrior",
       },
