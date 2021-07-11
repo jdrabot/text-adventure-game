@@ -721,6 +721,22 @@ export default [
     imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
+    id: 6312,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
+    options: [
+      {
+        display: true,
+        text: "Restart?",
+        nextText: 1,
+        HP: 1,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
     id: 6272,
     text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
     options: [
