@@ -525,7 +525,7 @@ export default [
   },
   {
     id: 622,
-    text: "Suddenly, the portrait begins to groan...'Who has disturbed my slumber?",
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
     options: [
       {
         display: true,
@@ -562,6 +562,178 @@ export default [
       },
     ],
     imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 625,
+    options: [
+      {
+        display: true,
+        text: "Drink elixer",
+        nextText: 626,
+        setInventory: {
+          items: { elixer: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 30,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally Warrior",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 627,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 10,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally Warrior",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 628,
+      },
+      {
+        display: true,
+        text: "Block incoming attack",
+        nextText: 626,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal",
+  },
+  {
+    id: 626,
+    text: "Is that it? But, then again, what else should I expect from Wally WIMP?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 629,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 627,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 626,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 628,
+    text: "Your broadsword struck the witch! It seems to have no effect, however",
+    options: [
+      {
+        display: true,
+        text: "Prepare for battle!",
+        nextText: 626,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 629,
+    text: "That insult cut deep. You flashback to a memory of getting beat up in school and your father and his friends taunting you with heckles of 'Wally Wimp' How did she know? What dark powers are at work here?",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 630,
+        HP:  20,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 630,
+    options: [
+      {
+        display: true,
+        text: "Drink half elixer",
+        nextText: 631,
+        setInventory: {
+          items: { elixer2: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 25,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally Warrior",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 631,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 20,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 631,
+      },
+      {
+        display: true,
+        text: "Block incoming attack",
+        nextText: 631,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal",
+  },
+  {
+    id: 631,
+    text: "A sudden shift in the air occurs and you can feel your pocket vibrating. The crystal the dark priest has given you begins to glow. The disembodied screech you hear next announces, 'The dark ritual is COMPLETE!",
+    options: [
+      {
+        text: "Next",
+        nextText: 632,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal",
+  },
+  {
+    id: 632,
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Wally Warrior has triumphed over the forces of darkness... for now.",
+    options: [
+      {
+        text: "Credits",
+        nextText: 633,
+        HP: 1,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "traveler",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif"
+  },
+  {
+    id: 633,
+    text: "Made with love by group 5. Thank you for playing!",
+    options: [
+      {
+        text: "Play again?",
+        nextText: 1,
+      }
+    ]
   },
 
   // cut to end game credits
