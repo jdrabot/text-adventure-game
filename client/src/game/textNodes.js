@@ -451,6 +451,7 @@ export default [
         hitFunction: ["SET_INVENTORY"],
         HP: 30,
         nextText: 620,
+        hitFunction: ["SET_CHARACTER"],
       },
       {
         display: true,
