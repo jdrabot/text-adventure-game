@@ -349,7 +349,7 @@ export default [
   },
   {
     id: 616,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find an elixer and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a large bronze key",
     display: true,
     options: [
       {
@@ -357,7 +357,7 @@ export default [
         display: true,
         nextText: 612,
         setInventory: {
-          items: { elixer2: true, bronzeKey2: true },
+          items: { bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -597,11 +597,6 @@ export default [
         text: "Attack",
         nextText: 628,
       },
-      {
-        display: true,
-        text: "Block incoming attack",
-        nextText: 626,
-      },
     ],
     imgSrc: "/images/locations/pixelMomReal",
   },
@@ -613,6 +608,26 @@ export default [
         display: true,
         text: "Next",
         nextText: 629,
+        HP: 20,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 6262,
+    text: "Is that it? But, then again, what else should I expect from Wally WIMP?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 6292,
+        HP: 0,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
       },
     ],
     imgSrc: "/images/locations/pixelMomReal.png",
@@ -624,7 +639,11 @@ export default [
       {
         display: true,
         text: "Next",
-        nextText: 626,
+        nextText: 6262,
+        HP: 20,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
       },
     ],
     imgSrc: "/images/locations/pixelMomReal.png",
@@ -649,10 +668,18 @@ export default [
         display: true,
         text: "Dispense retribution!",
         nextText: 630,
-        HP: 20,
-        imgSrc: "/images/characters/barbarian.gif",
-        name: "Wally WIMP",
-        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 6292,
+    text: "That insult cut deep. You flashback to a memory of getting beat up in school and your father and his friends taunting you with heckles of 'Wally Wimp' 'How did she know? What dark powers are at work here?' You have failed",
+    options: [
+      {
+        display: true,
+        text: "Restart",
+        nextText: 1,
       },
     ],
     imgSrc: "/images/locations/pixelMomReal.png",
@@ -662,21 +689,8 @@ export default [
     options: [
       {
         display: true,
-        text: "Drink half elixer",
-        nextText: 631,
-        setInventory: {
-          items: { elixer2: false },
-        },
-        hitFunction: ["SET_INVENTORY"],
-        HP: 25,
-        imgSrc: "/images/characters/barbarian.gif",
-        name: "Wally Warrior",
-        hitFunction: ["SET_CHARACTER"],
-      },
-      {
-        display: true,
         text: "Eat pickles",
-        nextText: 631,
+        nextText: 6312,
         setInventory: {
           items: { pickles: false },
         },
@@ -689,11 +703,6 @@ export default [
       {
         display: true,
         text: "Attack",
-        nextText: 631,
-      },
-      {
-        display: true,
-        text: "Block incoming attack",
         nextText: 631,
       },
     ],
@@ -709,13 +718,30 @@ export default [
         nextText: 632,
       },
     ],
-    imgSrc: "/images/locations/pixelMomReal",
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 627,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
+    options: [
+      {
+        display: true,
+        text: "Restart?",
+        nextText: 6262,
+        HP: 1,
+        imgSrc: "/images/characters/barbarian.gif",
+        name: "Wally WIMP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
     id: 632,
     text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Wally Warrior has triumphed over the forces of darkness... for now.",
     options: [
       {
+        display: true,
         text: "Credits",
         nextText: 633,
         HP: 1,
@@ -731,6 +757,7 @@ export default [
     text: "Made with love by group 5. Thank you for playing!",
     options: [
       {
+        display: true,
         text: "Play again?",
         nextText: 1,
       },
