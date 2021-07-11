@@ -249,10 +249,6 @@ export default [
         HP: 1,
         hitFunction: ["SET_CHARACTER"],
         name: "Traveler",
-        setInventory: {
-          items: {},
-        },
-        hitFunction: ["SET_INVENTORY"],
       },
     ],
     // burly gentleman
