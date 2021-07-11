@@ -727,7 +727,7 @@ export default [
       {
         display: true,
         text: "Restart?",
-        nextText: 6262,
+        nextText: 1,
         HP: 1,
         imgSrc: "/images/characters/barbarian.gif",
         name: "Wally WIMP",
