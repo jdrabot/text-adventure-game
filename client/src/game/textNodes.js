@@ -289,7 +289,7 @@ export default [
       {
         display: true,
         text: "Open the door on the right",
-        nextText: 13,
+        nextText: 613,
       },
       {
         display: true,
