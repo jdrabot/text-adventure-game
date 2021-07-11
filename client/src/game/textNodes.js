@@ -528,9 +528,6 @@ export default [
     ],
     imgSrc: "/images/locations/pixelPainting.png",
   },
-  {
-    
-  }
 
   // cut to end game credits
 
