@@ -305,7 +305,7 @@ export default [
   },
   {
     id: 612,
-    text: "You open the door and step out into what looks like a library. You see a table in front of you. A large, candle in an ornate holder illuminates the bookshelf in the back.",
+    text: "You open the door and step out into what looks like a library. You see a table in front of you. A red candle in a large, ornate holder illuminates the bookshelf in the back.",
     options: [
       {
         display: true,
@@ -349,7 +349,7 @@ export default [
   },
   {
     id: 616,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find an elixer potion and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find an elixer and a large bronze key",
     display: true,
     options: [
       {
@@ -444,7 +444,7 @@ export default [
   },
   {
     id: 619,
-    text: "As you hand the candles over, they light with a black flame in the priests hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
+    text: "As you hand the candles over, they light with a black flame in the priest's hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
     options: [
       {
         display: true,
@@ -534,6 +534,35 @@ export default [
       },
     ],
     imgSrc: "/images/locations/pixelPainting.png",
+  },
+  {
+    id: 623,
+    text: "The portrait shakes itself to the floor and the room goes black except for a pillar of fire emanating from the painting.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 624,
+        imgSrc: "/images/characters/barbarian.gif",
+        HP=HP-10,
+        nextText: 6,
+        hitFunction: ["SET_CHARACTER"],
+        name: "Wally Warrior",
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif",
+  },
+  {
+    id: 624,
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 625,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png"
   },
 
   // cut to end game credits
