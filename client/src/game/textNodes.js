@@ -649,7 +649,7 @@ export default [
         display: true,
         text: "Dispense retribution!",
         nextText: 630,
-        HP:  20,
+        HP: 20,
         imgSrc: "/images/characters/barbarian.gif",
         name: "Wally WIMP",
         hitFunction: ["SET_CHARACTER"],
@@ -697,13 +697,14 @@ export default [
         nextText: 631,
       },
     ],
-    imgSrc: "/images/locations/pixelMomReal",
+    imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
     id: 631,
     text: "A sudden shift in the air occurs and you can feel your pocket vibrating. The crystal the dark priest has given you begins to glow. The disembodied screech you hear next announces, 'The dark ritual is COMPLETE!",
     options: [
       {
+        display: true,
         text: "Next",
         nextText: 632,
       },
@@ -723,7 +724,7 @@ export default [
         hitFunction: ["SET_CHARACTER"],
       },
     ],
-    imgSrc: "/images/locations/poof.gif"
+    imgSrc: "/images/locations/poof.gif",
   },
   {
     id: 633,
@@ -732,8 +733,8 @@ export default [
       {
         text: "Play again?",
         nextText: 1,
-      }
-    ]
+      },
+    ],
   },
 
   // cut to end game credits
