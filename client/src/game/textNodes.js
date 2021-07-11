@@ -582,7 +582,7 @@ export default [
       {
         display: true,
         text: "Eat pickles",
-        nextText: 627,
+        nextText: 6272,
         setInventory: {
           items: { pickles: false },
         },
@@ -598,7 +598,7 @@ export default [
         nextText: 628,
       },
     ],
-    imgSrc: "/images/locations/pixelMomReal",
+    imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
     id: 626,
@@ -721,7 +721,7 @@ export default [
     imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
-    id: 627,
+    id: 6272,
     text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
     options: [
       {
