@@ -43,13 +43,13 @@ export default [
   {
     id: 2, // how to erase "open cupboard"
 
-    text: "You look inside the cupboard and you find a few tarnished coins, a bronze key, and a shred of paper that kind of looks like a map",
+    text: "You look inside the cupboard and you find a few tarnished coins, a bronze key, and a few sheets of paper that kind of looks like the beginning of a story",
     options: [
       {
         text: "Take the items",
         display: true,
         setInventory: {
-          items: { coins: true, bronzeKey: true, map1: true },
+          items: { coins: true, bronzeKey: true, pages1: true },
         },
         hitFunction: ["SET_INVENTORY"],
         optionsToDisplayFalse: [0, 1],
@@ -71,13 +71,13 @@ export default [
   },
   {
     id: 3,
-    text: "You open the icebox and find a half-empty mana potion and a jar of pickles",
+    text: "You open the icebox and find a half-empty elixer potion and a jar of pickles",
     options: [
       {
         display: true,
         text: "take the potion and pickles",
         setInventory: {
-          items: { mana: true, pickles: true },
+          items: { elixer: true, pickles: true },
         },
         hitFunction: ["SET_INVENTORY"],
         optionsToDisplayFalse: [0, 1],
@@ -131,7 +131,6 @@ export default [
 
   {
     id: 5,
-    // image change
     text: "You walk into what looks like an armory. There, you see a burly- looking gentleman who looks not the least bit surprised to see you.",
     options: [
       {
@@ -191,7 +190,7 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
 
-        nextText: 9,
+        nextText: 601,
       },
     ],
     imgSrc: "/images/locations/pixelDude.png",
@@ -208,7 +207,7 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
 
-        nextText: 9,
+        nextText: 701,
       },
     ],
     imgSrc: "/images/locations/pixelDude.png",
@@ -225,7 +224,7 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
 
-        nextText: 9,
+        nextText: 801,
       },
     ],
     imgSrc: "/images/locations/pixelDude.png",
@@ -234,25 +233,25 @@ export default [
   //////// WALLY WARRIOR
 
   {
-    id: 9,
+    id: 601,
     text: "Make sure you scour each room for items to use on this quest. Beware, though, good traveler, not all items are helpful. Some prove to be more trouble than they're worth!",
     options: [
       {
         display: true,
         text: "Leave the armory",
-        nextText: 10,
+        nextText: 610,
       },
       {
         display: true,
         text: "Attack the burly-looking gentleman",
-        nextText: 11,
+        nextText: 611,
       },
     ],
     // burly gentleman
     imgSrc: "/images/locations/pixelDude.png",
   },
   {
-    id: 11,
+    id: 611,
     text: "The burly-looking gentleman is a lot burlier than you thought he was. He kills you with no trouble",
     options: [
       {
@@ -267,25 +266,25 @@ export default [
     imgSrc: "/images/locations/pixelPow.png",
   },
   {
-    id: 10,
+    id: 610,
     text: "You crack open the door and step out into a dark, stone-walled hallway.",
     options: [
       {
         display: true,
         text: "Next",
-        nextText: 103,
+        nextText: 6103,
       },
     ],
     imgSrc: "/images/locations/pixelHallway.png",
   },
   {
-    id: 103,
+    id: 6103,
     text: "It smells musty and you can hear shuffling behind some of these doors. You wonder what fresh hell awaits you...",
     options: [
       {
         display: true,
         text: "Open the door on the left",
-        nextText: 12,
+        nextText: 612,
       },
       {
         display: true,
@@ -295,47 +294,47 @@ export default [
       {
         display: true,
         text: "Go to the door at the end of the hallway",
-        nextText: 14,
+        nextText: 614,
       },
     ],
-    imgSrc: "/images/locations/pixelHall.png",
+    imgSrc: "/images/locations/pixelHallway.png",
   },
   {
-    id: 12,
-    text: "You open the door and step out into what looks like a library...",
+    id: 612,
+    text: "You open the door and step out into what looks like a library. You see a table in front of you. A large, candle in an ornate holder illuminates the bookshelf in the back.",
     options: [
       {
         display: true,
-        text: "inspect red candle",
-        nextText: 15,
+        text: "inspect ornate candle holder",
+        nextText: 615,
       },
       {
         display: true,
         text: "inspect bookshelf",
-        nextText: 16,
+        nextText: 616,
       },
       {
         display: true,
         text: "inspect table",
-        nextText: 17,
+        nextText: 617,
       },
       {
         display: true,
         text: "Exit into Hallway",
-        nextText: 10,
+        nextText: 6103,
       },
     ],
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-    id: 15,
-    text: "this candle looks interesting enough to take",
+    id: 615,
+    text: "A red candle that looks interesting enough to take",
     display: true,
     options: [
       {
         text: "take the candle",
         display: true,
-        nextText: 12,
+        nextText: 612,
         setInventory: {
           items: { redCandle: true },
         },
@@ -345,16 +344,16 @@ export default [
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-    id: 16,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a mana potion and a large bronze key",
+    id: 616,
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find an elixer potion and a large bronze key",
     display: true,
     options: [
       {
         text: "take the items",
         display: true,
-        nextText: 12,
+        nextText: 612,
         setInventory: {
-          items: { mana2: true, bronzeKey2: true },
+          items: { elixer2: true, bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -362,14 +361,14 @@ export default [
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-    id: 17,
+    id: 617,
     text: "On the table, there is a large black candle. Looking around, you see some drawers. All of them are locked except one.",
     display: true,
     options: [
       {
         text: "take the black candle",
         display: true,
-        nextText: 12,
+        nextText: 612,
         setInventory: {
           items: { blackCandle: true },
         },
@@ -378,22 +377,22 @@ export default [
       {
         text: "open the drawer",
         display: true,
-        nextText: 18,
+        nextText: 618,
       },
     ],
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-    id: 18,
-    text: "In the drawer, you find another piece of the map that looks like it lines up perfectly with the piece you already have.",
+    id: 618,
+    text: "In the drawer, you find another page of the book that looks like it continues the story you already have.",
     display: true,
     options: [
       {
-        text: "take the map piece",
+        text: "take the pages",
         display: true,
-        nextText: 12,
+        nextText: 612,
         setInventory: {
-          items: { map2: true },
+          items: { pages2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -402,30 +401,59 @@ export default [
   },
   {
     // cathedral
-    id: 13,
-    text: "Cathedral... dark priest",
+    id: 613,
+    text: "You enter a large cathedral. It is barely lit, but you see a lone figure at the end of the room, chanting in some language you don't understand.",
     options: [
       {
         display: true,
-        text: "Place candles in respective holders and light",
+        text: "Go to the end of the room and talk to the figure",
+        nextText: 650,
+      },
+      {
+        display: true,
+        text: "This place is creepy. Retreat back into the hallway",
+        nextText: 6103,
+      },
+    ],
+  },
+  {
+    id: 650,
+    text: "As you get closer, the figure stops his strange chanting and turns to face you. 'Greetings, traveler' he says in a cold, scratchy voice, 'I am the dark priest of this cathedral. Have you the candles for the ritual?",
+    options: [
+      {
+        display: true,
+        text: "Hand priest the candles and back away.",
         setInventory: {
           items: { redCandle: false, blackCandle: false },
         },
         hitFunction: ["SET_INVENTORY"],
-
-        nextText: 19,
+        nextText: 619,
+      },
+      {
+        display: true,
+        text: "This priest is too much. Get out of there!",
+        nextText: 6103,
       },
     ],
-    imgSrc: "/images/locations/pixelCathedral.png",
+    imgSrc: "/images/locations/pixelPriest.png",
   },
   {
-    id: 19,
-    text: "The dark ritual has begun...",
+    id: 619,
+    text: "As you hand the candles over, they light with a black flame in the priests hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
     options: [
       {
         display: true,
-        text: "Exit into hallway",
-        nextText: 10,
+        text: "Take the red crystal the priest is offering and exit into hallway.",
+        setInventory: {
+          items: { redCrystal: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 6103,
+      },
+      {
+        display: true,
+        text: "I'm not taking whatever you're offering, freak! I'm getting out of here!",
+        nextText: 6103,
       },
     ],
     imgSrc: "/images/locations/pixelPriest.png",
@@ -561,7 +589,7 @@ export default [
   },
   {
     id: 16,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a mana potion and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a elixer potion and a large bronze key",
     display: true,
     options: [
       {
@@ -569,7 +597,7 @@ export default [
         display: true,
         nextText: 12,
         setInventory: {
-          items: { mana2: true, bronzeKey2: true },
+          items: { elixer2: true, bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -600,15 +628,15 @@ export default [
   },
   {
     id: 18,
-    text: "In the drawer, you find another piece of the map that looks like it lines up perfectly with the piece you already have.",
+    text: "In the drawer, you find another piece of the pages that looks like it lines up perfectly with the piece you already have.",
     display: true,
     options: [
       {
-        text: "take the map piece",
+        text: "take the pages piece",
         display: true,
         nextText: 12,
         setInventory: {
-          items: { map2: true },
+          items: { pages2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -774,7 +802,7 @@ export default [
   },
   {
     id: 16,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a mana potion and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a elixer potion and a large bronze key",
     display: true,
     options: [
       {
@@ -782,7 +810,7 @@ export default [
         display: true,
         nextText: 12,
         setInventory: {
-          items: { mana2: true, bronzeKey2: true },
+          items: { elixer2: true, bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -813,15 +841,15 @@ export default [
   },
   {
     id: 18,
-    text: "In the drawer, you find another piece of the map that looks like it lines up perfectly with the piece you already have.",
+    text: "In the drawer, you find another piece of the pages that looks like it lines up perfectly with the piece you already have.",
     display: true,
     options: [
       {
-        text: "take the map piece",
+        text: "take the pages piece",
         display: true,
         nextText: 12,
         setInventory: {
-          items: { map2: true },
+          items: { pages2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
