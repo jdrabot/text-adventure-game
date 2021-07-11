@@ -224,7 +224,7 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
 
-        nextText: 801,
+        nextText: 89,
       },
     ],
     imgSrc: "/images/locations/pixelDude.png",
@@ -937,354 +937,354 @@ export default [
     imgSrc: "/images/locations/pixelLibrary.png",
   },
   {
-                   // cathedral
-                   id: 713,
-                   text: "You enter a large cathedral. It is barely lit, but you see a lone figure at the end of the room, chanting in some language you don't understand.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Go to the end of the room and talk to the figure",
-                       nextText: 750,
-                     },
-                     {
-                       display: true,
-                       text: "This place is creepy. Retreat back into the hallway",
-                       nextText: 7103,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelCathedral.png",
-                 },
-                 {
-                   id: 750,
-                   text: "As you get closer, the figure stops his strange chanting and turns to face you. 'Greetings, traveler' he says in a cold, scratchy voice, 'I am the dark priest of this cathedral. Have you the candles for the ritual?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Hand priest the candles and back away.",
-                       setInventory: {
-                         items: { redCandle: false, blackCandle: false },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       nextText: 719,
-                     },
-                     {
-                       display: true,
-                       text: "This priest is too much. Get out of there!",
-                       nextText: 7103,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelPriest.png",
-                 },
-                 {
-                   id: 719,
-                   text: "As you hand the candles over, they light with a black flame in the priest's hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Take the red crystal the priest is offering and exit into hallway.",
-                       setInventory: {
-                         items: { redCrystal: true },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       HP: 20,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy Mage",
-                       nextText: 720,
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                     {
-                       display: true,
-                       text: "I'm not taking whatever you're offering, freak! I'm getting out of here!",
-                       nextText: 7103,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelPriest.png",
-                 },
-                 {
-                   id: 720,
-                   text: "You can feel some of your life force draining itself into the crystal. Maybe this wasn't such a good idea.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Exit into hallway",
-                       nextText: 7103,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelCathedral.png",
-                 },
-                 {
-                   // must have keys in inventoy to open door... required inventory
-                   id: 721,
-                   text: "In front of you, you see a large, gated door with two keyholes",
-                   options: [
-                     {
-                       display: true,
-                       text: "Use the bronze keys to open the door",
-                       setInventory: {
-                         items: { bronzeKey: false, bronzeKey2: false },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       nextText: 714,
-                     },
-                     {
-                       display: true,
-                       text: "Go back to the beginning of the hallway",
-                       nextText: 7103,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelEndDoor.png",
-                 },
-                 {
-                   id: 714,
-                   text: "You open the door and walk into what appears to be a woman's bedroom. An evil looking portrait hangs on the wall. You also see a dresser with the door cracked open and a large, open wooden chest.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Inspect the dresser",
-                       nextText: 722,
-                     },
-                     {
-                       display: true,
-                       text: "Inspect the chest",
-                       nextText: 722,
-                     },
-                     {
-                       display: true,
-                       text: "Inspect the portrait",
-                       nextText: 722,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelBedroom.png",
-                 },
-                 {
-                   id: 722,
-                   text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Get ready to battle!",
-                       nextText: 723,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelPainting.png",
-                 },
-                 {
-                   id: 723,
-                   text: "The portrait shakes itself to the floor and the room goes black except for a pillar of fire emanating from the painting.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Next",
-                       nextText: 724,
-                       imgSrc: "/images/characters/mage.gif",
-                       HP: 15,
-                       hitFunction: ["SET_CHARACTER"],
-                       name: "Mindy Mage",
-                     },
-                   ],
-                   imgSrc: "/images/locations/poof.gif",
-                 },
-                 {
-                   id: 724,
-                   text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
-                   options: [
-                     {
-                       display: true,
-                       text: "Dispense retribution!",
-                       nextText: 725,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 725,
-                   options: [
-                     {
-                       display: true,
-                       text: "Drink elixer",
-                       nextText: 726,
-                       setInventory: {
-                         items: { elixer: false },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       HP: 25,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy Mage",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                     {
-                       display: true,
-                       text: "Eat pickles",
-                       nextText: 7272,
-                       setInventory: {
-                         items: { pickles: false },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       HP: 10,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy Mage",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                     {
-                       display: true,
-                       text: "Attack",
-                       nextText: 728,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 726,
-                   text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Next",
-                       nextText: 729,
-                       HP: 20,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy MUCK-UP",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 7262,
-                   text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Next",
-                       nextText: 7292,
-                       HP: 0,
-                       imgSrc: "/images/characters/unknown.gif",
-                       name: "Mindy MUCK-UP",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 727,
-                   text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Next",
-                       nextText: 7262,
-                       HP: 10,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy MUCK-UP",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 728,
-                   text: "Your staff struck the witch! It seems to have no effect, however",
-                   options: [
-                     {
-                       display: true,
-                       text: "Prepare for battle!",
-                       nextText: 726,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 729,
-                   text: "That insult cut deep. You flashback to a memory of your first love and how you accidentally set them on fire. The town called you 'Mindy Muck-up' and banished you for life. How did she know? What dark powers are at work here?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Dispense retribution!",
-                       nextText: 730,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 7292,
-                   text: "That insult cut deep. You flashback to a memory of your first love and how you accidentally set them on fire. The town called you 'Mindy Muck-up' and banished you for life. How did she know? What dark powers are at work here?",
-                   options: [
-                     {
-                       display: true,
-                       text: "Restart",
-                       nextText: 1,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 730,
-                   options: [
-                     {
-                       display: true,
-                       text: "Eat pickles",
-                       nextText: 7272,
-                       setInventory: {
-                         items: { pickles: false },
-                       },
-                       hitFunction: ["SET_INVENTORY"],
-                       HP: 20,
-                       imgSrc: "/images/characters/mage.gif",
-                       name: "Mindy MUCK-UP",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                     {
-                       display: true,
-                       text: "Attack",
-                       nextText: 731,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 731,
-                   text: "A sudden shift in the air occurs and you can feel your pocket vibrating. The crystal the dark priest has given you begins to glow. The disembodied screech you hear next announces, 'The dark ritual is COMPLETE!",
-                   options: [
-                     {
-                       display: true,
-                       text: "Next",
-                       nextText: 732,
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 7272,
-                   text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
-                   options: [
-                     {
-                       display: true,
-                       text: "Restart?",
-                       nextText: 1,
-                       HP: 1,
-                       imgSrc: "/images/characters/unknown.gif",
-                       name: "Traveler",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                   ],
-                   imgSrc: "/images/locations/pixelMomReal.png",
-                 },
-                 {
-                   id: 732,
-                   text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
-                   options: [
-                     {
-                       display: true,
-                       text: "Credits",
-                       nextText: 633,
-                       HP: 1,
-                       imgSrc: "/images/characters/unknown.gif",
-                       name: "traveler",
-                       hitFunction: ["SET_CHARACTER"],
-                     },
-                   ],
-                   imgSrc: "/images/locations/poof.gif",
-                 },
+    // cathedral
+    id: 713,
+    text: "You enter a large cathedral. It is barely lit, but you see a lone figure at the end of the room, chanting in some language you don't understand.",
+    options: [
+      {
+        display: true,
+        text: "Go to the end of the room and talk to the figure",
+        nextText: 750,
+      },
+      {
+        display: true,
+        text: "This place is creepy. Retreat back into the hallway",
+        nextText: 7103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelCathedral.png",
+  },
+  {
+    id: 750,
+    text: "As you get closer, the figure stops his strange chanting and turns to face you. 'Greetings, traveler' he says in a cold, scratchy voice, 'I am the dark priest of this cathedral. Have you the candles for the ritual?",
+    options: [
+      {
+        display: true,
+        text: "Hand priest the candles and back away.",
+        setInventory: {
+          items: { redCandle: false, blackCandle: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 719,
+      },
+      {
+        display: true,
+        text: "This priest is too much. Get out of there!",
+        nextText: 7103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPriest.png",
+  },
+  {
+    id: 719,
+    text: "As you hand the candles over, they light with a black flame in the priest's hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
+    options: [
+      {
+        display: true,
+        text: "Take the red crystal the priest is offering and exit into hallway.",
+        setInventory: {
+          items: { redCrystal: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 20,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy Mage",
+        nextText: 720,
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "I'm not taking whatever you're offering, freak! I'm getting out of here!",
+        nextText: 7103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPriest.png",
+  },
+  {
+    id: 720,
+    text: "You can feel some of your life force draining itself into the crystal. Maybe this wasn't such a good idea.",
+    options: [
+      {
+        display: true,
+        text: "Exit into hallway",
+        nextText: 7103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelCathedral.png",
+  },
+  {
+    // must have keys in inventoy to open door... required inventory
+    id: 721,
+    text: "In front of you, you see a large, gated door with two keyholes",
+    options: [
+      {
+        display: true,
+        text: "Use the bronze keys to open the door",
+        setInventory: {
+          items: { bronzeKey: false, bronzeKey2: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 714,
+      },
+      {
+        display: true,
+        text: "Go back to the beginning of the hallway",
+        nextText: 7103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelEndDoor.png",
+  },
+  {
+    id: 714,
+    text: "You open the door and walk into what appears to be a woman's bedroom. An evil looking portrait hangs on the wall. You also see a dresser with the door cracked open and a large, open wooden chest.",
+    options: [
+      {
+        display: true,
+        text: "Inspect the dresser",
+        nextText: 722,
+      },
+      {
+        display: true,
+        text: "Inspect the chest",
+        nextText: 722,
+      },
+      {
+        display: true,
+        text: "Inspect the portrait",
+        nextText: 722,
+      },
+    ],
+    imgSrc: "/images/locations/pixelBedroom.png",
+  },
+  {
+    id: 722,
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
+    options: [
+      {
+        display: true,
+        text: "Get ready to battle!",
+        nextText: 723,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPainting.png",
+  },
+  {
+    id: 723,
+    text: "The portrait shakes itself to the floor and the room goes black except for a pillar of fire emanating from the painting.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 724,
+        imgSrc: "/images/characters/mage.gif",
+        HP: 15,
+        hitFunction: ["SET_CHARACTER"],
+        name: "Mindy Mage",
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif",
+  },
+  {
+    id: 724,
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 725,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 725,
+    options: [
+      {
+        display: true,
+        text: "Drink elixer",
+        nextText: 726,
+        setInventory: {
+          items: { elixer: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 25,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy Mage",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 7272,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 10,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy Mage",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 728,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 726,
+    text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 729,
+        HP: 20,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy MUCK-UP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 7262,
+    text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 7292,
+        HP: 0,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "Mindy MUCK-UP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 727,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 7262,
+        HP: 10,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy MUCK-UP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 728,
+    text: "Your staff struck the witch! It seems to have no effect, however",
+    options: [
+      {
+        display: true,
+        text: "Prepare for battle!",
+        nextText: 726,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 729,
+    text: "That insult cut deep. You flashback to a memory of your first love and how you accidentally set them on fire. The town called you 'Mindy Muck-up' and banished you for life. How did she know? What dark powers are at work here?",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 730,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 7292,
+    text: "That insult cut deep. You flashback to a memory of your first love and how you accidentally set them on fire. The town called you 'Mindy Muck-up' and banished you for life. How did she know? What dark powers are at work here?",
+    options: [
+      {
+        display: true,
+        text: "Restart",
+        nextText: 1,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 730,
+    options: [
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 7272,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 20,
+        imgSrc: "/images/characters/mage.gif",
+        name: "Mindy MUCK-UP",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 731,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 731,
+    text: "A sudden shift in the air occurs and you can feel your pocket vibrating. The crystal the dark priest has given you begins to glow. The disembodied screech you hear next announces, 'The dark ritual is COMPLETE!",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 732,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 7272,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
+    options: [
+      {
+        display: true,
+        text: "Restart?",
+        nextText: 1,
+        HP: 1,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "Traveler",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 732,
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
+    options: [
+      {
+        display: true,
+        text: "Credits",
+        nextText: 633,
+        HP: 1,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "traveler",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif",
+  },
 
   //////// ROGER ROGUE
 
@@ -1497,5 +1497,522 @@ export default [
       },
     ],
     imgSrc: "/images/locations/pixelBedroom.png",
+  },
+
+  {
+    id: 89,
+    text: "Make sure you scour each room for items to use on this quest. Beware, though, good traveler, not all items are helpful. Some prove to be more trouble than they're worth!",
+    options: [
+      {
+        display: true,
+        text: "Leave the armory",
+        nextText: 810,
+      },
+      {
+        display: true,
+        text: "Attack the burly-looking gentleman",
+        nextText: 811,
+      },
+    ],
+    // burly gentleman
+    imgSrc: "/images/locations/pixelDude.png",
+  },
+  {
+    id: 811,
+    text: "The burly-looking gentleman is a lot burlier than you thought he was. He kills you with no trouble",
+    options: [
+      {
+        // empty inventory?
+        display: true,
+        text: "Start Again?",
+        nextText: 1,
+        hitFunction: ["RESTART"],
+      },
+    ],
+    // attack splash
+    imgSrc: "/images/locations/pixelPow.png",
+  },
+  {
+    id: 810,
+    text: "You crack open the door and step out into a dark, stone-walled hallway.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelHallway.png",
+  },
+  {
+    id: 8103,
+    text: "It smells musty and you can hear shuffling behind some of these doors. You wonder what fresh hell awaits you...",
+    options: [
+      {
+        display: true,
+        text: "Open the door on the left",
+        nextText: 812,
+      },
+      {
+        display: true,
+        text: "Open the door on the right",
+        nextText: 813,
+      },
+      {
+        display: true,
+        text: "Go to the door at the end of the hallway",
+        nextText: 814,
+      },
+    ],
+    imgSrc: "/images/locations/pixelHallway.png",
+  },
+  {
+    id: 812,
+    text: "You open the door and step out into what looks like a library...",
+    options: [
+      {
+        display: true,
+        text: "inspect red candle",
+        nextText: 815,
+      },
+      {
+        display: true,
+        text: "inspect bookshelf",
+        nextText: 816,
+      },
+      {
+        display: true,
+        text: "inspect table",
+        nextText: 817,
+      },
+      {
+        display: true,
+        text: "Exit into Hallway",
+        nextText: 810,
+      },
+    ],
+    imgSrc: "/images/locations/pixelLibrary.png",
+  },
+  {
+    id: 815,
+    text: "this candle looks interesting enough to take",
+    display: true,
+    options: [
+      {
+        text: "take the candle",
+        display: true,
+        nextText: 812,
+        setInventory: {
+          items: { redCandle: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelLibrary.png",
+  },
+  {
+    id: 816,
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a elixer potion and a large bronze key",
+    display: true,
+    options: [
+      {
+        text: "take the items",
+        display: true,
+        nextText: 812,
+        setInventory: {
+          items: { elixer2: true, bronzeKey2: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelLibrary.png",
+  },
+  {
+    id: 817,
+    text: "On the table, there is a large black candle. Looking around, you see some drawers. All of them are locked except one.",
+    display: true,
+    options: [
+      {
+        text: "take the black candle",
+        display: true,
+        nextText: 812,
+        setInventory: {
+          items: { blackCandle: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+      },
+      {
+        text: "open the drawer",
+        display: true,
+        nextText: 818,
+      },
+    ],
+    imgSrc: "/images/locations/pixelLibrary.png",
+  },
+  {
+    id: 818,
+    text: "In the drawer, you find another piece of the pages that looks like it lines up perfectly with the piece you already have.",
+    display: true,
+    options: [
+      {
+        text: "take the pages piece",
+        display: true,
+        nextText: 812,
+        setInventory: {
+          items: { pages2: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelLibrary.png",
+  },
+  {
+    // cathedral
+    id: 813,
+    text: "You enter a large cathedral. It is barely lit, but you see a lone figure at the end of the room, chanting in some language you don't understand.",
+    options: [
+      {
+        display: true,
+        text: "Go to the end of the room and talk to the figure",
+        nextText: 850,
+      },
+      {
+        display: true,
+        text: "This place is creepy. Retreat back into the hallway",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelCathedral.png",
+  },
+  {
+    id: 850,
+    text: "As you get closer, the figure stops his strange chanting and turns to face you. 'Greetings, traveler' he says in a cold, scratchy voice, 'I am the dark priest of this cathedral. Have you the candles for the ritual?",
+    options: [
+      {
+        display: true,
+        text: "Hand priest the candles and back away.",
+        setInventory: {
+          items: { redCandle: false, blackCandle: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 819,
+      },
+      {
+        display: true,
+        text: "This priest is too much. Get out of there!",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPriest.png",
+  },
+  {
+    id: 819,
+    text: "As you hand the candles over, they light with a black flame in the priest's hands. 'The dark ritual has begun. Thank you. Take this as a token of my dark gratitude.",
+    options: [
+      {
+        display: true,
+        text: "Take the red crystal the priest is offering and exit into hallway.",
+        setInventory: {
+          items: { redCrystal: true },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 20,
+        imgSrc: "/images/characters/thief.gif",
+        name: "Roger Rogue",
+        nextText: 820,
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "I'm not taking whatever you're offering, freak! I'm getting out of here!",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPriest.png",
+  },
+  {
+    id: 820,
+    text: "You can feel some of your life force draining itself into the crystal. Maybe this wasn't such a good idea.",
+    options: [
+      {
+        display: true,
+        text: "Exit into hallway",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelCathedral.png",
+  },
+  {
+    // must have keys in inventoy to open door... required inventory
+    id: 821,
+    text: "In front of you, you see a large, gated door with two keyholes",
+    options: [
+      {
+        display: true,
+        text: "Use the bronze keys to open the door",
+        setInventory: {
+          items: { bronzeKey: false, bronzeKey2: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        nextText: 814,
+      },
+      {
+        display: true,
+        text: "Go back to the beginning of the hallway",
+        nextText: 8103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelEndDoor.png",
+  },
+  {
+    id: 814,
+    text: "You open the door and walk into what appears to be a woman's bedroom. An evil looking portrait hangs on the wall. You also see a dresser with the door cracked open and a large, open wooden chest.",
+    options: [
+      {
+        display: true,
+        text: "Inspect the dresser",
+        nextText: 822,
+      },
+      {
+        display: true,
+        text: "Inspect the chest",
+        nextText: 822,
+      },
+      {
+        display: true,
+        text: "Inspect the portrait",
+        nextText: 822,
+      },
+    ],
+    imgSrc: "/images/locations/pixelBedroom.png",
+  },
+  {
+    id: 822,
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
+    options: [
+      {
+        display: true,
+        text: "Get ready to battle!",
+        nextText: 823,
+      },
+    ],
+    imgSrc: "/images/locations/pixelPainting.png",
+  },
+  {
+    id: 823,
+    text: "The portrait shakes itself to the floor and the room goes black except for a pillar of fire emanating from the painting.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 824,
+        imgSrc: "/images/characters/thief.gif",
+        HP: 15,
+        hitFunction: ["SET_CHARACTER"],
+        name: "Roger Rogue",
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif",
+  },
+  {
+    id: 824,
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 825,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 825,
+    options: [
+      {
+        display: true,
+        text: "Drink elixer",
+        nextText: 826,
+        setInventory: {
+          items: { elixer: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 25,
+        imgSrc: "/images/characters/thief.gif",
+        name: "Roger Rogue",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 8272,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 10,
+        imgSrc: "/images/characters/thief.gif",
+        name: "Roger Rogue",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 828,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 826,
+    text: "Is that it? But, then again, what else should I expect from ROTTEN Roger?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 829,
+        HP: 20,
+        imgSrc: "/images/characters/thief.gif",
+        name: "ROTTEN Roger",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 8262,
+    text: "Is that it? But, then again, what else should I expect from ROTTEN Roger?",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 8292,
+        HP: 20,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "ROTTEN Roger",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 827,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 8262,
+        HP: 10,
+        imgSrc: "/images/characters/thief.gif",
+        name: "ROTTEN Roger",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 828,
+    text: "Your short sword struck the witch! It seems to have no effect, however",
+    options: [
+      {
+        display: true,
+        text: "Prepare for battle!",
+        nextText: 826,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 829,
+    text: "That insult cut deep. You flashback to a memory of your wife calling you Rotten Roger for stealing her jewelry. You probably deserved it, but the pain still lingers. How did she know? What dark powers are at work here?",
+    options: [
+      {
+        display: true,
+        text: "Dispense retribution!",
+        nextText: 830,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 8292,
+    text: "That insult cut deep. You flashback to a memory of your wife calling you Rotten Roger for stealing her jewelry. You probably deserved it, but the pain still lingers. How did she know? What dark powers are at work here?",
+    options: [
+      {
+        display: true,
+        text: "Restart",
+        nextText: 1,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 830,
+    options: [
+      {
+        display: true,
+        text: "Eat pickles",
+        nextText: 7272,
+        setInventory: {
+          items: { pickles: false },
+        },
+        hitFunction: ["SET_INVENTORY"],
+        HP: 1,
+        imgSrc: "/images/characters/thief.gif",
+        name: "ROTTEN Roger",
+        hitFunction: ["SET_CHARACTER"],
+      },
+      {
+        display: true,
+        text: "Attack",
+        nextText: 831,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 831,
+    text: "A sudden shift in the air occurs and you can feel your pocket vibrating. The crystal the dark priest has given you begins to glow. The disembodied screech you hear next announces, 'The dark ritual is COMPLETE!",
+    options: [
+      {
+        display: true,
+        text: "Next",
+        nextText: 832,
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 8272,
+    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those. You fall over in agony and die a horrible death",
+    options: [
+      {
+        display: true,
+        text: "Restart?",
+        nextText: 1,
+        HP: 1,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "Traveler",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/pixelMomReal.png",
+  },
+  {
+    id: 832,
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
+    options: [
+      {
+        display: true,
+        text: "Credits",
+        nextText: 633,
+        HP: 1,
+        imgSrc: "/images/characters/unknown.gif",
+        name: "traveler",
+        hitFunction: ["SET_CHARACTER"],
+      },
+    ],
+    imgSrc: "/images/locations/poof.gif",
   },
 ];
