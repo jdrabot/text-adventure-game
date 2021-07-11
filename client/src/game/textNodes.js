@@ -415,6 +415,7 @@ export default [
         nextText: 6103,
       },
     ],
+    imgSrc: "/images/locations/pixelCathedral.png",
   },
   {
     id: 650,
@@ -448,7 +449,8 @@ export default [
           items: { redCrystal: true },
         },
         hitFunction: ["SET_INVENTORY"],
-        nextText: 6103,
+        HP: 30,
+        nextText: 620,
       },
       {
         display: true,
@@ -457,6 +459,18 @@ export default [
       },
     ],
     imgSrc: "/images/locations/pixelPriest.png",
+  },
+  {
+    id: 620,
+    text: "You can feel some of your life force draining itself into the crystal. Maybe this wasn't such a good idea.",
+    options: [
+      {
+        display: true,
+        text: "Exit into hallway",
+        nextText: 6103,
+      },
+    ],
+    imgSrc: "/images/locations/pixelCathedral.png",
   },
   {
     // must have keys in inventoy to open door... required inventory
