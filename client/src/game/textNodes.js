@@ -207,7 +207,7 @@ export default [
         },
         hitFunction: ["SET_INVENTORY"],
 
-        nextText: 701,
+        nextText: 79,
       },
     ],
     imgSrc: "/images/locations/pixelDude.png",
@@ -1284,18 +1284,6 @@ export default [
                      },
                    ],
                    imgSrc: "/images/locations/poof.gif",
-                 },
-                 {
-                   id: 633,
-                   text: "Made with love by group 5. Thank you for playing!",
-                   options: [
-                     {
-                       display: true,
-                       text: "Play again?",
-                       nextText: 1,
-                     },
-                   ],
-                   imgSrc: "/images/locatins/poof.gif",
                  },
 
   //////// ROGER ROGUE
