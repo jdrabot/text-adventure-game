@@ -557,7 +557,7 @@ export default [
   },
   {
     id: 624,
-    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has crawled out of the painting. Too late, you realize, for she has already struck you hard with her staff",
     options: [
       {
         display: true,
@@ -730,7 +730,7 @@ export default [
   },
   {
     id: 632,
-    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Wally Warrior has triumphed over the forces of darkness... for now.",
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again to the confines of the painting. Wally Warrior has triumphed over the forces of darkness... for now.",
     options: [
       {
         display: true,
@@ -1082,7 +1082,7 @@ export default [
   },
   {
     id: 724,
-    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has crawled out of the painting. Too late, you realize, for she has already struck you hard with her staff",
     options: [
       {
         display: true,
@@ -1255,7 +1255,7 @@ export default [
   },
   {
     id: 732,
-    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again to the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
     options: [
       {
         display: true,
@@ -1808,7 +1808,7 @@ export default [
   },
   {
     id: 824,
-    text: "Suddenly, the flame dissipates and you can see the awful creature that has seem to come from the painting. Too late, you realize, for she has already struck you hard with her staff",
+    text: "Suddenly, the flame dissipates and you can see the awful creature that has crawled out of the painting. Too late, you realize, for she has already struck you hard with her staff",
     options: [
       {
         display: true,
@@ -1981,7 +1981,7 @@ export default [
   },
   {
     id: 832,
-    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Roger Rogue has triumphed over the forces of darkness... for now.",
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again to the confines of the painting. Roger Rogue has triumphed over the forces of darkness... for now.",
     options: [
       {
         display: true,
