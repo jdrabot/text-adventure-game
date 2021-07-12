@@ -1073,7 +1073,7 @@ export default [
         text: "Next",
         nextText: 724,
         imgSrc: "/images/characters/mage.gif",
-        HP: 15,
+        HP: 10,
         hitFunction: ["SET_CHARACTER"],
         name: "Mindy Mage",
       },
