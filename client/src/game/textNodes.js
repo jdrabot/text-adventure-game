@@ -746,7 +746,7 @@ export default [
         nextText: 1,
       },
     ],
-    imgSrc: "/images/locatins/poof.gif",
+    imgSrc: "/images/locations/poof.gif",
   },
 
   // cut to end game credits
@@ -1864,22 +1864,6 @@ export default [
     imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
-    id: 827,
-    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
-    options: [
-      {
-        display: true,
-        text: "Next",
-        nextText: 8262,
-        HP: 10,
-        imgSrc: "/images/characters/thief.gif",
-        name: "ROTTEN Roger",
-        hitFunction: ["SET_CHARACTER"],
-      },
-    ],
-    imgSrc: "/images/locations/pixelMomReal.png",
-  },
-  {
     id: 828,
     text: "Your short sword struck the witch! It seems to have no effect, however",
     options: [
@@ -1921,7 +1905,7 @@ export default [
       {
         display: true,
         text: "Eat pickles",
-        nextText: 7272,
+        nextText: 8272,
         setInventory: {
           items: { pickles: false },
         },
@@ -1969,7 +1953,7 @@ export default [
   },
   {
     id: 832,
-    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Mindy Mage has triumphed over the forces of darkness... for now.",
+    text: "The witch looks terrified, and the same pillar of flame that brought her into existence now begins to trap her once again inside the confines of the painting. Roger Rogue has triumphed over the forces of darkness... for now.",
     options: [
       {
         display: true,
