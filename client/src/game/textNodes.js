@@ -71,11 +71,11 @@ export default [
   },
   {
     id: 3,
-    text: "You open the icebox and find a half-empty elixer potion and a jar of pickles",
+    text: "You open the icebox and find a half-empty elixer and a jar of pickles",
     options: [
       {
         display: true,
-        text: "take the potion and pickles",
+        text: "take the elixer and pickles",
         setInventory: {
           items: { elixer: true, pickles: true },
         },
@@ -525,7 +525,7 @@ export default [
   },
   {
     id: 622,
-    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?'",
     options: [
       {
         display: true,
@@ -602,7 +602,7 @@ export default [
   },
   {
     id: 626,
-    text: "Is that it? But, then again, what else should I expect from Wally WIMP?",
+    text: "'Is that it? But, then again, what else should I expect from Wally WIMP?'",
     options: [
       {
         display: true,
@@ -618,7 +618,7 @@ export default [
   },
   {
     id: 6262,
-    text: "Is that it? But, then again, what else should I expect from Wally WIMP?",
+    text: "'Is that it? But, then again, what else should I expect from Wally WIMP?'",
     options: [
       {
         display: true,
@@ -822,11 +822,11 @@ export default [
   },
   {
     id: 712,
-    text: "You open the door and step out into what looks like a library...",
+    text: "You open the door and step out into what looks like a library. You see a table in front of you. A red candle in a large, ornate holder illuminates the bookshelf in the back.",
     options: [
       {
         display: true,
-        text: "inspect red candle",
+        text: "inspect ornate candle holder",
         nextText: 715,
       },
       {
@@ -866,7 +866,7 @@ export default [
   },
   {
     id: 716,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a elixer potion and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a large bronze key",
     display: true,
     options: [
       {
@@ -874,7 +874,7 @@ export default [
         display: true,
         nextText: 712,
         setInventory: {
-          items: { elixer2: true, bronzeKey2: true },
+          items: { bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -905,11 +905,11 @@ export default [
   },
   {
     id: 718,
-    text: "In the drawer, you find another piece of the pages that looks like it lines up perfectly with the piece you already have.",
+    text: "In the drawer, you find more pages that look like they line up perfectly with the pages you already have.",
     display: true,
     options: [
       {
-        text: "take the pages piece",
+        text: "take the pages",
         display: true,
         nextText: 712,
         setInventory: {
@@ -1042,7 +1042,7 @@ export default [
   },
   {
     id: 722,
-    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?'",
     options: [
       {
         display: true,
@@ -1119,7 +1119,7 @@ export default [
   },
   {
     id: 726,
-    text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
+    text: "'Is that it? But, then again, what else should I expect from Mindy MUCK-UP?'",
     options: [
       {
         display: true,
@@ -1135,7 +1135,7 @@ export default [
   },
   {
     id: 7262,
-    text: "Is that it? But, then again, what else should I expect from Mindy MUCK-UP?",
+    text: "'Is that it? But, then again, what else should I expect from Mindy MUCK-UP?'",
     options: [
       {
         display: true,
@@ -1536,11 +1536,11 @@ export default [
   },
   {
     id: 812,
-    text: "You open the door and step out into what looks like a library...",
+    text: "You open the door and step out into what looks like a library. You see a table in front of you. A red candle in a large, ornate holder illuminates the bookshelf in the back.",
     options: [
       {
         display: true,
-        text: "inspect red candle",
+        text: "inspect ornate candle holder",
         nextText: 815,
       },
       {
@@ -1580,15 +1580,15 @@ export default [
   },
   {
     id: 816,
-    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a elixer potion and a large bronze key",
+    text: "you see one of the books looks out of place. Upon further investigation, this book is hollow! Inside, you find a large bronze key",
     display: true,
     options: [
       {
-        text: "take the items",
+        text: "take the key",
         display: true,
         nextText: 812,
         setInventory: {
-          items: { elixer2: true, bronzeKey2: true },
+          items: { bronzeKey2: true },
         },
         hitFunction: ["SET_INVENTORY"],
       },
@@ -1619,11 +1619,11 @@ export default [
   },
   {
     id: 818,
-    text: "In the drawer, you find another piece of the pages that looks like it lines up perfectly with the piece you already have.",
+    text: "In the drawer, you find another one of the pages that looks like it lines up perfectly with the ones you already have.",
     display: true,
     options: [
       {
-        text: "take the pages piece",
+        text: "take the page",
         display: true,
         nextText: 812,
         setInventory: {
@@ -1756,7 +1756,7 @@ export default [
   },
   {
     id: 822,
-    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?",
+    text: "Suddenly, the portrait begins to groan...'What fool dares enter my quarters?'",
     options: [
       {
         display: true,
@@ -1833,7 +1833,7 @@ export default [
   },
   {
     id: 826,
-    text: "Is that it? But, then again, what else should I expect from ROTTEN Roger?",
+    text: "'Is that it? But, then again, what else should I expect from ROTTEN Roger?'",
     options: [
       {
         display: true,
@@ -1849,7 +1849,7 @@ export default [
   },
   {
     id: 8262,
-    text: "Is that it? But, then again, what else should I expect from ROTTEN Roger?",
+    text: "'Is that it? But, then again, what else should I expect from ROTTEN Roger?'",
     options: [
       {
         display: true,
