@@ -633,22 +633,6 @@ export default [
     imgSrc: "/images/locations/pixelMomReal.png",
   },
   {
-    id: 627,
-    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
-    options: [
-      {
-        display: true,
-        text: "Next",
-        nextText: 6262,
-        HP: 20,
-        imgSrc: "/images/characters/barbarian.gif",
-        name: "Wally WIMP",
-        hitFunction: ["SET_CHARACTER"],
-      },
-    ],
-    imgSrc: "/images/locations/pixelMomReal.png",
-  },
-  {
     id: 628,
     text: "Your broadsword struck the witch! It seems to have no effect, however",
     options: [
@@ -1159,22 +1143,6 @@ export default [
         nextText: 7292,
         HP: 0,
         imgSrc: "/images/characters/unknown.gif",
-        name: "Mindy MUCK-UP",
-        hitFunction: ["SET_CHARACTER"],
-      },
-    ],
-    imgSrc: "/images/locations/pixelMomReal.png",
-  },
-  {
-    id: 727,
-    text: "Uh oh. Those were some old pickles. You probably shouldn't have eaten those.",
-    options: [
-      {
-        display: true,
-        text: "Next",
-        nextText: 7262,
-        HP: 10,
-        imgSrc: "/images/characters/mage.gif",
         name: "Mindy MUCK-UP",
         hitFunction: ["SET_CHARACTER"],
       },
